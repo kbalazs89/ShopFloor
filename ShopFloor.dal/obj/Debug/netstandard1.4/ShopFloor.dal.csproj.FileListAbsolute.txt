@@ -1,0 +1,7 @@
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor.dal\bin\Debug\netstandard1.4\ShopFloor.dal.deps.json
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor.dal\bin\Debug\netstandard1.4\ShopFloor.dal.dll
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor.dal\bin\Debug\netstandard1.4\ShopFloor.dal.pdb
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor.dal\obj\Debug\netstandard1.4\ShopFloor.dal.csprojResolveAssemblyReference.cache
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor.dal\obj\Debug\netstandard1.4\ShopFloor.dal.AssemblyInfo.cs
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor.dal\obj\Debug\netstandard1.4\ShopFloor.dal.dll
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor.dal\obj\Debug\netstandard1.4\ShopFloor.dal.pdb

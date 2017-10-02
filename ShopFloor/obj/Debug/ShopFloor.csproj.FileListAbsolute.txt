@@ -1,0 +1,15 @@
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\bin\Debug\ShopFloor.exe.config
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\bin\Debug\ShopFloor.exe
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\bin\Debug\ShopFloor.pdb
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\ShopFloor.csprojResolveAssemblyReference.cache
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\MainWindow.g.cs
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\App.g.cs
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\ShopFloor_MarkupCompile.cache
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\ShopFloor_MarkupCompile.lref
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\MainWindow.baml
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\ShopFloor.g.resources
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\ShopFloor.Properties.Resources.resources
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\ShopFloor.csproj.GenerateResource.Cache
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\ShopFloor.exe
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\ShopFloor.pdb
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\CathegoryMain.g.cs
