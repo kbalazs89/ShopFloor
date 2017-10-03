@@ -13,3 +13,8 @@ c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\De
 c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\ShopFloor.exe
 c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\ShopFloor.pdb
 c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\CathegoryMain.g.cs
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\bin\Debug\ShopFloor.dal.dll
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\bin\Debug\ShopFloor.dal.pdb
+c:\users\balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\CathegoryMain.baml
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\LoginView.g.cs
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\LoginView.baml

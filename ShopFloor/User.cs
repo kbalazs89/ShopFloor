@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ShopFloor
 {
-    class User
+    public class User : BaseModel
     {
         public User(UserDBModel user)
         {

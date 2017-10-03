@@ -7,7 +7,7 @@ using ShopFloor.dal;
 
 namespace ShopFloor
 {
-    class Product
+    public class Product : BaseModel
     {
         string _name;
         int _price;

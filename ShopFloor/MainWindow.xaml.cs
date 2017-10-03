@@ -23,8 +23,15 @@ namespace ShopFloor
         public MainWindow()
         {
             InitializeComponent();
+            var loginView = new LoginView();
+            loginView.ShowDialog();
         }
 
+        private void ClickOnCat(object sender, RoutedEventArgs e)
+        {
+            CathegoryMain Cat = new CathegoryMain((Button)sender);
+            Cat.ShowDialog();
+        }
 
     }
 }

@@ -3708,10 +3708,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\users\\balazs\\documents\\visual studio 2017\\Projects\\ShopFloor\\ShopFloor.dal\\ShopFloor.dal.csproj",
+      "projectUniqueName": "C:\\Users\\Balazs\\Documents\\Visual Studio 2017\\Projects\\ShopFloor\\ShopFloor.dal\\ShopFloor.dal.csproj",
       "projectName": "ShopFloor.dal",
-      "projectPath": "c:\\users\\balazs\\documents\\visual studio 2017\\Projects\\ShopFloor\\ShopFloor.dal\\ShopFloor.dal.csproj",
-      "outputPath": "c:\\users\\balazs\\documents\\visual studio 2017\\Projects\\ShopFloor\\ShopFloor.dal\\obj\\",
+      "projectPath": "C:\\Users\\Balazs\\Documents\\Visual Studio 2017\\Projects\\ShopFloor\\ShopFloor.dal\\ShopFloor.dal.csproj",
+      "outputPath": "C:\\Users\\Balazs\\Documents\\Visual Studio 2017\\Projects\\ShopFloor\\ShopFloor.dal\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netstandard1.4"

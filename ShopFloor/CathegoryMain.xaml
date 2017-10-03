@@ -4,16 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShopFloor"
+        xmlns:base="clr-namespace:ShopFloor"
         mc:Ignorable="d"
-        Title="CathegoryMain" Height="300" Width="300">
-    <Grid>
-        <ListBox  HorizontalAlignment="Left" Height="299" Margin="12,60,0,0" VerticalAlignment="Top" Width="235">
+        Title="CathegoryMain" Height="534.149" Width="382.842">
+    <Grid Margin="0,0,-0.2,4.8">
+        <ListBox SelectedItem="{Binding SelectProduct}" ItemsSource="{Binding ProductList}" HorizontalAlignment="Left" Height="389" Margin="12,60,0,0" VerticalAlignment="Top" Width="235">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
                         <Label Content="{Binding Name}"/>
-                        <Label Content="{Binding Price}" FontSize="11" ContentStringFormat="0 Ft"/>
-                        <Label Content="{Binding Quantity}" FontSize="11" ContentStringFormat="0 db"/>
+                        <Label Content="{Binding Price}" FontSize="11" ContentStringFormat="0 M USD"/>
+                        <Label Content="{Binding Quantity}" FontSize="11" ContentStringFormat="0 pcs"/>
+                        
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

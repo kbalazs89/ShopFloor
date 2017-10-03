@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShopFloor.dal
 {
-    class PurchaseDBModel
+    public class PurchaseDBModel
     {
         public UserDBModel User { get; set; }
         public DateTime Timestamp { get; set; }
