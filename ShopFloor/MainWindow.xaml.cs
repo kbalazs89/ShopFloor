@@ -20,12 +20,21 @@ namespace ShopFloor
     /// </summary>
     public partial class MainWindow : Window
     {
+       public  MainViewModel _vm;
         public MainWindow()
         {
             InitializeComponent();
             var loginView = new LoginView();
             loginView.ShowDialog();
+
+            _vm = new MainViewModel
+            {
+                User = loginView.ViewModel.AuthenticatedUser
+            };
+            DataContext = _vm;
         }
+
+
 
         private void ClickOnCat(object sender, RoutedEventArgs e)
         {
@@ -33,5 +42,9 @@ namespace ShopFloor
             Cat.ShowDialog();
         }
 
+        private void AddProductClick(object sender, RoutedEventArgs e)
+        {
+  
+        }
     }
 }

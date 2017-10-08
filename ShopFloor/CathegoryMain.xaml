@@ -15,10 +15,12 @@
                         <Label Content="{Binding Name}"/>
                         <Label Content="{Binding Price}" FontSize="11" ContentStringFormat="0 M USD"/>
                         <Label Content="{Binding Quantity}" FontSize="11" ContentStringFormat="0 pcs"/>
-                        
+
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <Label Content="{Binding User.Username}" HorizontalAlignment="Left" Margin="252,35,0,0" VerticalAlignment="Top" Width="63" HorizontalContentAlignment="Right" Height="25" />
+        <Label Content="{Binding User.Cash}" HorizontalAlignment="Left" Margin="320,35,0,0" VerticalAlignment="Top" Width="87" HorizontalContentAlignment="Right" Height="25"/>
     </Grid>
 </Window>

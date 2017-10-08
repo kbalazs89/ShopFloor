@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShopFloor.Properties
+namespace ShopFloor_.Properties
 {
 
 

@@ -1,0 +1,15 @@
+C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\bin\Debug\ShopFloor_.dal.dll.config
+C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\bin\Debug\ShopFloor_.dal.dll
+C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\bin\Debug\ShopFloor_.dal.pdb
+C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\bin\Debug\EntityFramework.dll
+C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\bin\Debug\System.Data.SQLite.dll
+C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\bin\Debug\EntityFramework.xml
+C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\bin\Debug\System.Data.SQLite.xml
+C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\obj\Debug\ShopFloor.dal.csprojResolveAssemblyReference.cache
+C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\obj\Debug\ShopFloor_.dal.dll
+C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\obj\Debug\ShopFloor_.dal.pdb

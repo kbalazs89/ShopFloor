@@ -1,37 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace ShopFloor.dal
 {
-    public class Context
+    using System;
+    using System.Data.Entity;
+    using System.Linq;
+
+    public class Context : DbContext
     {
-        public List<ProductDBModel> Products { get; } = new List<ProductDBModel>
-            {
-                new ProductDBModel{Name="A380",Price=432,Quantity=40, Cathegory="_1", NrOfSeats=615, FlightRange=15700, NrOfEngines=4},
-                new ProductDBModel{Name="737",Price=200,Quantity=80, Cathegory="_2", NrOfSeats=380, FlightRange=12300, NrOfEngines=2},
-            };
-        public List<UserDBModel> Users { get; } = new List<UserDBModel>
-        {
-            new UserDBModel { Username = "asdf", Password = "asdf", Cash = 2500 }
-        };
-
-        public List<PurchaseDBModel> Purchases { get; }
-
+        // Your context has been configured to use a 'Context' connection string from your application's 
+        // configuration file (App.config or Web.config). By default, this connection string targets the 
+        // 'ShopFloor_.dal.Context' database on your LocalDb instance. 
+        // 
+        // If you wish to target a different database and/or database provider, modify the 'Context' 
+        // connection string in the application configuration file.
         public Context()
+            : base("name=Context")
         {
-            Purchases = new List<PurchaseDBModel>
-            {
-                new PurchaseDBModel
-                {
-                    User = Users[0],
-                    Timestamp = DateTime.Now,
-                    Products = new List<ProductDBModel>
-                    {
-                        Products[0]
-                    }
-                }
-            };
         }
+
+        // Add a DbSet for each entity type that you want to include in your model. For more information 
+        // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
+
+        public virtual DbSet<ProductDBModel> Products { get; set; }
+        public virtual DbSet<UserDBModel> Users { get; set; }
+        public virtual DbSet<PurchaseDBModel> Purchases { get; set; }
     }
+
+    //public class MyEntity
+    //{
+    //    public int Id { get; set; }
+    //    public string Name { get; set; }
+    //}
 }

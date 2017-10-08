@@ -41,12 +41,21 @@ namespace ShopFloor
 
         private void LogoutClick(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult exit = MessageBox.Show("Forgot your passport?", "Logout", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            MessageBoxResult exit = MessageBox.Show("Forgot your passport?", "Logout", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
             if (exit == MessageBoxResult.Yes)
             {
                 System.Windows.Application.Current.Shutdown();
             }
             else return;
+
+
+
+        }
+
+        private void OnClosing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = ViewModel.AuthenticatedUser == null
+                    && !_onLogout;
+        }
         }
     }
-}
