@@ -10,16 +10,17 @@ namespace ShopFloor.dal
     {
         readonly Context _ctx;
 
+
         public DataManager()
         {
             _ctx = new Context();
-            /*if (!_ctx.Users.Any(x => x.Username == "asdf"))
+           /* if (!_ctx.Users.Any(x => x.Username == "asdf"))
             {
                 _ctx.Users.Add(new UserDBModel
                 {
                     Username = "asdf",
                     Password = "asdf",
-                    Cash = 500
+                    Cash = 2500
                 });
                 _ctx.SaveChanges();
             }*/
@@ -46,7 +47,20 @@ namespace ShopFloor.dal
             return _ctx.Products.OrderBy(x => x.Name);
         }
 
-
+        public void AddProduct(string name, int price, int quantity, string cathegory, int nrOfSeats, int flightRange, int nrOfEngines)
+        {
+            _ctx.Products.Add(new ProductDBModel
+            {
+                Name= name,
+                Price= price,
+                Quantity = quantity,
+                Cathegory= cathegory,
+                NrOfSeats = nrOfSeats,
+                FlightRange = flightRange,
+                NrOfEngines = nrOfEngines
+            });
+            _ctx.SaveChanges();
+        }
 
     }
 }

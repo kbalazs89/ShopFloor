@@ -15,6 +15,6 @@ namespace ShopFloor.dal
         public string Cathegory { get; set; }
         public int NrOfSeats { get; set; }
         public int FlightRange { get; set; }
-        public byte NrOfEngines { get; set; }
+        public int NrOfEngines { get; set; }
     }
 }

@@ -11,14 +11,15 @@ namespace ShopFloor
     {
         public Product Product { get; set; }
         public bool IsNew { get; set; }
-        Context _ctx;
+        //Context _ctx;
 
-        Product product;
         public ProductFormNewModel(Product Product)
         {
-            /*this.Product = Product;
+           /* this.Product = Product;
             if (!IsNew)
                 Save();*/
+            var manager = new DataManager();
+            manager.AddProduct(Product.Name, Product.Price, Product.Quantity, Product.Cathegory, Product.NrOfSeats, Product.FlightRange, Product.NrOfEngines);
 
         }
 
@@ -27,24 +28,8 @@ namespace ShopFloor
             return !string.IsNullOrEmpty(Product.Name) && Product.Name.Length > 3 && Product.Price > 0 && Product.Quantity >= 0;
         }
 
-        public void AddProduct(ProductDBModel product)
-        {
-            _ctx = new Context();
-            _ctx.Products.Add(product);
 
-        }
 
-        /*public void Save()
-        {
-            if (!IsNew)
-                product = new Product { Name = Product.Name, Price = Product.Price, Quantity = Product.Quantity };
-        }
 
-        public void OriginalValue()
-        {
-            Product.Name = product.Name;
-            Product.Price = product.Price;
-            Product.Quantity = product.Quantity;
-        }*/
     }
 }

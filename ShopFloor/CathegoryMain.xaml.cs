@@ -19,17 +19,17 @@ namespace ShopFloor
     /// </summary>
     public partial class CathegoryMain : Window
     {
-        readonly CatMainModel _cmm;
+        public CatMainModel CatMain { get; }
 
 
         public CathegoryMain(Button sender)
         {
-            var _sender = sender;
+            //var _sender = sender;
             string whoSent = sender.Content.ToString();
             InitializeComponent();
-            _cmm = new CatMainModel(whoSent);
-            DataContext = _cmm;
-            MessageBox.Show(_cmm.User.Username);
+            CatMain = new CatMainModel(whoSent);
+            DataContext = CatMain;
+            //MessageBox.Show(_cmm.User.Username);
         }
     }
 }
