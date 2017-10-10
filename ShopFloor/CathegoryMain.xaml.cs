@@ -19,7 +19,7 @@ namespace ShopFloor
     /// </summary>
     public partial class CathegoryMain : Window
     {
-        public CatMainModel CatMain { get; }
+        public CatMainModel catMain;
 
 
         public CathegoryMain(Button sender)
@@ -27,8 +27,8 @@ namespace ShopFloor
             //var _sender = sender;
             string whoSent = sender.Content.ToString();
             InitializeComponent();
-            CatMain = new CatMainModel(whoSent);
-            DataContext = CatMain;
+            catMain = new CatMainModel(whoSent);
+            DataContext = catMain;
             //MessageBox.Show(_cmm.User.Username);
         }
     }

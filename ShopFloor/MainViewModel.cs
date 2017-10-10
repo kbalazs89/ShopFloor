@@ -10,10 +10,11 @@ namespace ShopFloor
 {
    public class MainViewModel : BaseModel
     {
-        public ObservableCollection<Product> ProductList { get; set; }
+       // public ObservableCollection<Product> ProductList { get; set; }
         //public IEnumerable<ProductDBModel> ProductList { get; set; }
         public Product SelectProduct { get; set; }
         public User User { get; set; }
+        
 
 
         public MainViewModel()
@@ -24,7 +25,10 @@ namespace ShopFloor
             {
                 ProductList.Add(new Product(product));
             }*/
-            var manager = new DataManager();
+            //var manager = new DataManager();
+          
         }
+
+
     }
 }

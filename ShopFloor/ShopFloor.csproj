@@ -84,7 +84,7 @@
     <Compile Include="NewProductView.xaml.cs">
       <DependentUpon>NewProductView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ProductFormNewModel.cs" />
+    <Compile Include="ProductFormViewModel.cs" />
     <Compile Include="User.cs" />
     <Page Include="CathegoryMain.xaml">
       <SubType>Designer</SubType>

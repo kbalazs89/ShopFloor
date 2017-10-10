@@ -14,6 +14,7 @@ namespace ShopFloor
 
         public User AuthenticatedUser { get; private set; }
 
+
         public bool Login()
         {
             var manager = new DataManager();

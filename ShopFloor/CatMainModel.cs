@@ -10,7 +10,7 @@ using System.Windows.Controls;
 
 namespace ShopFloor
 {
-    public class CatMainModel : MainViewModel
+    public class CatMainModel : BaseModel
     {
 
         /* public CatMainModel(string whoSent)
@@ -26,9 +26,12 @@ namespace ShopFloor
                      ProductList.Add(new Product(product));
              }
          }*/
+
+        public ObservableCollection<Product> ProductList { get; set; }
+
         public CatMainModel(string whoSent)
-        { 
-        ProductList = new ObservableCollection<Product>();
+        {
+            ProductList = new ObservableCollection<Product>();
             var manager = new DataManager();
             foreach (var product in manager.GetProducts(whoSent))
             {

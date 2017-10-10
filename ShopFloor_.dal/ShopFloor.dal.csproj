@@ -60,7 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context.cs" />
+    <Compile Include="Cont.cs" />
     <Compile Include="DataManager.cs" />
     <Compile Include="ProductDBModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

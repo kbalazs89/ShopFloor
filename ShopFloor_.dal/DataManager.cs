@@ -8,13 +8,13 @@ namespace ShopFloor.dal
 {
     public class DataManager
     {
-        readonly Context _ctx;
+        readonly Cont _ctx;
 
 
         public DataManager()
         {
-            _ctx = new Context();
-           /* if (!_ctx.Users.Any(x => x.Username == "asdf"))
+            _ctx = new Cont();
+            /*if (!_ctx.Users.Any(x => x.Username == "asdf"))
             {
                 _ctx.Users.Add(new UserDBModel
                 {

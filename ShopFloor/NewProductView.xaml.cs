@@ -26,13 +26,15 @@ namespace ShopFloor
 
             private void SubmitClick(object sender, RoutedEventArgs e)
             {
-                var productVM = (ProductFormNewModel)DataContext;
+                var productVM = (ProductFormViewModel)DataContext;
+            productVM.AddProduct(productVM.Product);
                 
                 if (!productVM.ProductValidate())
                 {
                     MessageBox.Show("Hibás adatbevitel");
                     return;
                 }
+            MessageBox.Show("Sikeres mentés");
                 Close();
           }
     }

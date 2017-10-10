@@ -21,6 +21,7 @@ namespace ShopFloor
     public partial class MainWindow : Window
     {
        public  MainViewModel _vm;
+        public User UserX;
         public MainWindow()
         {
             InitializeComponent();
@@ -44,7 +45,9 @@ namespace ShopFloor
 
         private void AddProductClick(object sender, RoutedEventArgs e)
         {
-  
+            ProductFormViewModel viewModel = new ProductFormViewModel(new Product());
+            NewProductView newProduct = new NewProductView { DataContext = viewModel };
+            newProduct.ShowDialog();
         }
     }
 }

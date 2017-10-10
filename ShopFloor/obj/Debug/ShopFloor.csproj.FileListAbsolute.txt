@@ -30,3 +30,4 @@ C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\bin\De
 C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\NewProductView.g.cs
 C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\NewProductView.baml
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\ShopFloor.csproj.CoreCompileInputs.cache

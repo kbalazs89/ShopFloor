@@ -16,7 +16,7 @@
         <Label Content="Price:" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Grid.Row="1"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="87,94,0,0" TextWrapping="Wrap" Text="{Binding Product.Price,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="166" Grid.Row="1"/>
         <Label Content="Quantity:" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="87,134,0,0" TextWrapping="Wrap" Text="{Binding Product.Qantity,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="166" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="87,134,0,0" TextWrapping="Wrap" Text="{Binding Product.Quantity,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="166" Grid.Row="1"/>
         <Label Content="Cathegory:" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Grid.Row="1"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="87,174,0,0" TextWrapping="Wrap" Text="{Binding Product.Cathegory,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="166" Grid.Row="1"/>
         <Label Content="Number of seats:" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Grid.Row="1"/>

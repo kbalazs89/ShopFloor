@@ -13,3 +13,4 @@ C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\b
 C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\obj\Debug\ShopFloor.dal.csprojResolveAssemblyReference.cache
 C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\obj\Debug\ShopFloor_.dal.dll
 C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor_.dal\obj\Debug\ShopFloor_.dal.pdb
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor_.dal\obj\Debug\ShopFloor.dal.csproj.CoreCompileInputs.cache
