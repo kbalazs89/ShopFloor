@@ -49,5 +49,10 @@ namespace ShopFloor
             NewProductView newProduct = new NewProductView { DataContext = viewModel };
             newProduct.ShowDialog();
         }
+
+        private void ClickCart(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

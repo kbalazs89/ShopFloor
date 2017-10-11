@@ -47,6 +47,12 @@ namespace ShopFloor.dal
             return _ctx.Products.OrderBy(x => x.Name);
         }
 
+        public IEnumerable<ProductDBModel> GetProducts()
+        {
+
+            return _ctx.Products.OrderBy(x => x.Name);
+        }
+
         public void AddProduct(string name, int price, int quantity, string cathegory, int nrOfSeats, int flightRange, int nrOfEngines)
         {
             _ctx.Products.Add(new ProductDBModel
@@ -60,6 +66,18 @@ namespace ShopFloor.dal
                 NrOfEngines = nrOfEngines
             });
             _ctx.SaveChanges();
+        }
+
+        public void DeleteProduct(string name, int price, int nrOfSeats)
+        {
+            foreach (var prod in _ctx.Products)
+            {
+                if (name == prod.Name && price == prod.Price && nrOfSeats == prod.NrOfSeats)
+                    _ctx.Products.Remove(prod);
+            }
+            _ctx.SaveChanges();
+                      
+
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopFloor.dal;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace ShopFloor
     public partial class CathegoryMain : Window
     {
         public CatMainModel catMain;
-
+        public Product selectedProduct;
 
         public CathegoryMain(Button sender)
         {
@@ -31,5 +32,30 @@ namespace ShopFloor
             DataContext = catMain;
             //MessageBox.Show(_cmm.User.Username);
         }
+
+        private void AddCartClick(object sender, RoutedEventArgs e)
+        {
+            catMain.AddToCart(selectedProduct);
+        }
+
+        private void SelectedClick(object sender, SelectionChangedEventArgs e)
+        {
+            selectedProduct = catMain.SelectProduct;
+            
+        }
+
+        private void DeleteClick(object sender, RoutedEventArgs e)
+        {
+            catMain.DeleteProduct(selectedProduct);
+            MessageBox.Show("Successful! The item will disappear when you restart the application");
+        }
+
+        /*private void Check(object sender, RoutedEventArgs e)
+        {
+            foreach (var products in catMain.PurchasedProducts)
+            {
+                MessageBox.Show(products.Name);
+            }
+        }*/
     }
 }

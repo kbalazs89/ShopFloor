@@ -12,7 +12,7 @@
             <ColumnDefinition Width="178*"/>
             <ColumnDefinition Width="199*"/>
         </Grid.ColumnDefinitions>
-        <ListBox SelectedItem="{Binding SelectProduct}" ItemsSource="{Binding ProductList}" HorizontalAlignment="Left" Height="389" Margin="12,60,0,0" VerticalAlignment="Top" Width="235" Grid.ColumnSpan="2">
+        <ListBox SelectedItem="{Binding SelectProduct}" ItemsSource="{Binding ProductList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="389" Margin="12,60,0,0" VerticalAlignment="Top" Width="235" Grid.ColumnSpan="2" SelectionChanged="SelectedClick">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -26,5 +26,7 @@
         </ListBox>
         <Label Content="{Binding User.Username}" HorizontalAlignment="Left" Margin="73.971,35,0,0" VerticalAlignment="Top" Width="63" HorizontalContentAlignment="Right" Height="25" Grid.Column="1" />
         <Label Content="{Binding User.Cash}" HorizontalAlignment="Left" Margin="141.971,35,-30,0" VerticalAlignment="Top" Width="87" HorizontalContentAlignment="Right" Height="25" Grid.Column="1"/>
+        <Button Content="Add to cart" Grid.Column="1" HorizontalAlignment="Left" Margin="96.4,65,0,0" VerticalAlignment="Top" Width="75" Click="AddCartClick"/>
+        <Button Content="Delete item" Grid.Column="1" HorizontalAlignment="Left" Margin="96.4,103,0,0" VerticalAlignment="Top" Width="75" Click="DeleteClick"/>
     </Grid>
 </Window>

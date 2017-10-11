@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor\App.xaml
-4-781345443
+6-706383613
 
-16-579072905
+18-184237939
 22-1724764548
-CathegoryMain.xaml;LoginView.xaml;MainWindow.xaml;NewProductView.xaml;
+CartView.xaml;CathegoryMain.xaml;LoginView.xaml;MainWindow.xaml;NewProductView.xaml;ProductDetailsView.xaml;
 
 False
 
