@@ -82,10 +82,11 @@ namespace ShopFloor.dal
 
         }
 
-
+        public int SumPrice2 { get; set; }
         public void BuyProduct(string name, int price, int quantity, int nrOfSeats, int flightRange, string username)
         {
-             int sumPrice = 0;
+            int sumPrice = 0;
+
             foreach (var prod in _ctx.Products)
             {
                 if (name == prod.Name && price == prod.Price && nrOfSeats == prod.NrOfSeats && flightRange == prod.FlightRange)
@@ -100,6 +101,7 @@ namespace ShopFloor.dal
                 if (username == user.Username)
                     user.Cash = user.Cash - sumPrice;
             }
+            SumPrice2 = sumPrice;
             _ctx.SaveChanges();
         }
 

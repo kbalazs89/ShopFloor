@@ -20,10 +20,12 @@ namespace ShopFloor
                 Save();*/
         }
 
+
         public void AddProduct(Product Product)
         {
             var manager = new DataManager();
             manager.AddProduct(Product.Name, Product.Price, Product.Quantity, Product.Cathegory, Product.NrOfSeats, Product.FlightRange, Product.NrOfEngines);
+
         }
 
         public bool ProductValidate()

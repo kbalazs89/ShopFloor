@@ -24,6 +24,8 @@ namespace ShopFloor
             InitializeComponent();
         }
 
+
+
             private void SubmitClick(object sender, RoutedEventArgs e)
             {
                 var productVM = (ProductFormViewModel)DataContext;

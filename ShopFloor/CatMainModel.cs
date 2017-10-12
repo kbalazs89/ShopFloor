@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 
 namespace ShopFloor
 {
@@ -26,6 +27,8 @@ namespace ShopFloor
                      ProductList.Add(new Product(product));
              }
          }*/
+
+        
 
         public ObservableCollection<Product> ProductList { get; set; }
         //public ObservableCollection<Product> PurchasedProducts { get; set; } = new ObservableCollection<Product>();
@@ -89,6 +92,8 @@ namespace ShopFloor
         {
             var manager = new DataManager();
             manager.DeleteProduct(selectedProduct.Name, selectedProduct.Price, selectedProduct.NrOfSeats);
+            ProductList.Remove(SelectProduct);
         }
+
     }
 }

@@ -49,6 +49,7 @@ namespace ShopFloor
         {
             catMain.DeleteProduct(selectedProduct);
             MessageBox.Show("Successful! The item will disappear when you restart the application");
+            
         }
 
         private void WatchProductDetails(object sender, MouseButtonEventArgs e)
@@ -57,6 +58,13 @@ namespace ShopFloor
             ProductDetailsView productDetails = new ProductDetailsView(selectedProduct);
             productDetails.ShowDialog();
         }
+
+        private void ClickModify(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
 
         /*private void Check(object sender, RoutedEventArgs e)
         {

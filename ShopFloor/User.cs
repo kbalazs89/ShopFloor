@@ -23,15 +23,7 @@ namespace ShopFloor
         }
 
         int _cash;
-        public int Cash
-        {
-            get { return _cash; }
-            set
-            {
-                _cash = value;
-                OnPropertyChange();
-            }
-        }
+        public int Cash { get { return _cash; } set { _cash = value; OnPropertyChange(); } }
         public string Password { get; set; }
         public string Username { get; set; }
         public bool Admin { get; set; }

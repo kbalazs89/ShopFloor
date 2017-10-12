@@ -21,7 +21,7 @@ namespace ShopFloor
             {
                 manager.BuyProduct(product.Name, product.Price, product.Quantity, product.NrOfSeats, product.FlightRange, UserCart.Username);
             }
-
+            UserCart.Cash -= manager.SumPrice2;
             PurchasedProducts = new ObservableCollection<Product>();
             StaticClass.PurchasedProducts = new ObservableCollection<Product>();
         }
