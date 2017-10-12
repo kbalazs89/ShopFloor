@@ -42,6 +42,8 @@ namespace ShopFloor
             }
         }
 
+        public CatMainModel()
+        { }
 
 
         public string AddToCart(Product selectedProduct)

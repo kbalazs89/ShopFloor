@@ -47,6 +47,8 @@ namespace ShopFloor.dal
             return _ctx.Products.OrderBy(x => x.Name);
         }
 
+
+
         public IEnumerable<ProductDBModel> GetProducts()
         {
 

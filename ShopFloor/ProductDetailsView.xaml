@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShopFloor"
         mc:Ignorable="d"
-        Title="ProductDetailsView" Height="601.003" Width="300">
-    <Grid>
-        
+        Title="ProductDetailsView" Height="601.003" Width="399.2">
+    <Grid Margin="0,0,-0.2,4.8">
+        <!--<ListBox   HorizontalAlignment="Left" Height="512" Margin="10,49,0,0" VerticalAlignment="Top" Width="235" Grid.ColumnSpan="2">
+            <ListBox.ItemTemplate >
+                <DataTemplate >-->
+                    <StackPanel >
+                        <Label Content="{Binding SelectedProduct.Name}"/>
+                        <Label Content="{Binding SelectedProduct.Price}" FontSize="11" ContentStringFormat="0 M USD"/>
+                        <Label Content="{Binding SelectedProduct.Quantity}" FontSize="11" ContentStringFormat="0 pcs"/>
+                        <Label Content="{Binding SelectedProduct.Cathegory}"/>
+                        <Label Content="{Binding SelectedProduct.NrOfSeats}"/>
+                        <Label Content="{Binding SelectedProduct.FlightRange}"/>
+                        <Label Content="{Binding SelectedProduct.NrOfEngines}"/>
+                    </StackPanel>
+        <!--   </DataTemplate>
+           </ListBox.ItemTemplate>
+        </ListBox>-->
     </Grid>
 </Window>

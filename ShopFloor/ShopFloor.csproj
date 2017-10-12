@@ -90,6 +90,7 @@
     <Compile Include="ProductDetailsView.xaml.cs">
       <DependentUpon>ProductDetailsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ProductDetailsViewModel.cs" />
     <Compile Include="ProductFormViewModel.cs" />
     <Compile Include="User.cs" />
     <Page Include="CartView.xaml">

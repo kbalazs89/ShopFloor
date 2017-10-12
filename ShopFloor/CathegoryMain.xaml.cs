@@ -22,6 +22,7 @@ namespace ShopFloor
     {
         public CatMainModel catMain;
         public Product selectedProduct;
+        public ProductDetailsViewModel pDVM;
 
         public CathegoryMain(Button sender)
         {
@@ -48,6 +49,13 @@ namespace ShopFloor
         {
             catMain.DeleteProduct(selectedProduct);
             MessageBox.Show("Successful! The item will disappear when you restart the application");
+        }
+
+        private void WatchProductDetails(object sender, MouseButtonEventArgs e)
+        {
+            selectedProduct = catMain.SelectProduct;
+            ProductDetailsView productDetails = new ProductDetailsView(selectedProduct);
+            productDetails.ShowDialog();
         }
 
         /*private void Check(object sender, RoutedEventArgs e)

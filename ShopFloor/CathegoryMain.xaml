@@ -12,7 +12,7 @@
             <ColumnDefinition Width="178*"/>
             <ColumnDefinition Width="199*"/>
         </Grid.ColumnDefinitions>
-        <ListBox SelectedItem="{Binding SelectProduct}" ItemsSource="{Binding ProductList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="389" Margin="12,60,0,0" VerticalAlignment="Top" Width="235" Grid.ColumnSpan="2" SelectionChanged="SelectedClick">
+        <ListBox SelectedItem="{Binding SelectProduct}" ItemsSource="{Binding ProductList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="389" Margin="12,60,0,0" VerticalAlignment="Top" Width="235" Grid.ColumnSpan="2" SelectionChanged="SelectedClick" MouseDoubleClick="WatchProductDetails">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
