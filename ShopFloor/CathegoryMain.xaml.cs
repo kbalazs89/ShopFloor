@@ -31,7 +31,7 @@ namespace ShopFloor
             InitializeComponent();
             catMain = new CatMainModel(whoSent);
             DataContext = catMain;
-            //MessageBox.Show(_cmm.User.Username);
+            //MessageBox.Show(catMain.UserInCat.Username);
         }
 
         private void AddCartClick(object sender, RoutedEventArgs e)

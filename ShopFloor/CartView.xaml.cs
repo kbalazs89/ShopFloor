@@ -25,5 +25,13 @@ namespace ShopFloor
             InitializeComponent();
             DataContext = cartMM;
         }
+
+        private void PurchaseClick(object sender, RoutedEventArgs e)
+        {
+            CartViewModel cartMM = new CartViewModel();
+            cartMM.Purchase();
+            MessageBox.Show("Sikeres vásárlás");
+            Close();
+        }
     }
 }

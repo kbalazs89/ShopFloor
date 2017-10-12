@@ -30,6 +30,7 @@ namespace ShopFloor
         public ObservableCollection<Product> ProductList { get; set; }
         //public ObservableCollection<Product> PurchasedProducts { get; set; } = new ObservableCollection<Product>();
         public Product SelectProduct { get; set; }
+        public User UserInCat = StaticClass.LoggedUser;
 
         public CatMainModel(string whoSent)
         {

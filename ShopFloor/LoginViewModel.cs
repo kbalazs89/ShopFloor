@@ -22,6 +22,7 @@ namespace ShopFloor
             if (user == null)
                 return false;
             AuthenticatedUser = new User(user);
+            StaticClass.LoggedUser = AuthenticatedUser;
             return true;
         }
     }

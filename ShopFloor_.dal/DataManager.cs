@@ -82,5 +82,27 @@ namespace ShopFloor.dal
 
         }
 
+
+        public void BuyProduct(string name, int price, int quantity, int nrOfSeats, int flightRange, string username)
+        {
+             int sumPrice = 0;
+            foreach (var prod in _ctx.Products)
+            {
+                if (name == prod.Name && price == prod.Price && nrOfSeats == prod.NrOfSeats && flightRange == prod.FlightRange)
+                {
+                    prod.Quantity -= quantity;
+                    sumPrice = sumPrice + (price * quantity);
+                }
+            }
+
+            foreach (var user in _ctx.Users)
+            {
+                if (username == user.Username)
+                    user.Cash = user.Cash - sumPrice;
+            }
+            _ctx.SaveChanges();
+        }
+
+
     }
 }
