@@ -35,3 +35,5 @@ C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\De
 C:\Users\Balazs\documents\visual studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\CartView.baml
 C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\ProductDetailsView.g.cs
 C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\ProductDetailsView.baml
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\RegWindowView.g.cs
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor\obj\Debug\RegWindowView.baml

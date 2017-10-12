@@ -57,5 +57,11 @@ namespace ShopFloor
             e.Cancel = ViewModel.AuthenticatedUser == null
                     && !_onLogout;
         }
+
+        private void RegisterClick(object sender, RoutedEventArgs e)
+        {
+            RegWindowView regView = new RegWindowView();
+            regView.ShowDialog();
         }
+    }
     }

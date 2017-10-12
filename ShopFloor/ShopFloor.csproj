@@ -92,6 +92,10 @@
     </Compile>
     <Compile Include="ProductDetailsViewModel.cs" />
     <Compile Include="ProductFormViewModel.cs" />
+    <Compile Include="RegistViewModel.cs" />
+    <Compile Include="RegWindowView.xaml.cs">
+      <DependentUpon>RegWindowView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StaticClass.cs" />
     <Compile Include="User.cs" />
     <Page Include="CartView.xaml">
@@ -127,6 +131,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ProductDetailsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegWindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

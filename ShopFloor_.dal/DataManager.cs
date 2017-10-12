@@ -103,6 +103,19 @@ namespace ShopFloor.dal
             _ctx.SaveChanges();
         }
 
+        public void Regist(string username, string password)
+        {
+            if (!_ctx.Users.Any(x => x.Username == username))
+                _ctx.Users.Add(new UserDBModel
+                {
+                    Username = username,
+                    Password = password,
+                    Cash = 10000,
+                    Admin = true
+                });
+            _ctx.SaveChanges();
+        }
+
 
     }
 }

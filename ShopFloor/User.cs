@@ -15,6 +15,7 @@ namespace ShopFloor
             Username = user.Username;
             Password = user.Password;
             Cash = user.Cash;
+            Admin = user.Admin;
         }
         public User()
         {
@@ -33,6 +34,7 @@ namespace ShopFloor
         }
         public string Password { get; set; }
         public string Username { get; set; }
+        public bool Admin { get; set; }
         public ObservableCollection<Product> PurchasedProducts { get; set; } = new ObservableCollection<Product>();
     }
 }
