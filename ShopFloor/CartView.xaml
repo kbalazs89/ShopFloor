@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShopFloor"
         mc:Ignorable="d"
-        Title="CartView" Height="961.994" Width="300">
+        Title="CartView" Height="568.394" Width="434.4">
     <Grid>
-        <ListBox ItemsSource="{Binding User.PurchasedProducts}" HorizontalAlignment="Left" Height="408" Margin="10,56,0,0" VerticalAlignment="Top" Width="235">
+        <ListBox ItemsSource="{Binding PurchasedProducts}" HorizontalAlignment="Left" Height="408" Margin="10,56,0,0" VerticalAlignment="Top" Width="235">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>

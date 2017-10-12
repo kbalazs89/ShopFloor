@@ -21,7 +21,7 @@ namespace ShopFloor
     public partial class MainWindow : Window
     {
        public  MainViewModel _vm;
-        public User UserX;
+        //public User UserX;
         public MainWindow()
         {
             InitializeComponent();
@@ -39,8 +39,8 @@ namespace ShopFloor
 
         private void ClickOnCat(object sender, RoutedEventArgs e)
         {
-            CathegoryMain Cat = new CathegoryMain((Button)sender);
-            Cat.ShowDialog();
+            CathegoryMain cat = new CathegoryMain((Button)sender);
+            cat.ShowDialog();
         }
 
         private void AddProductClick(object sender, RoutedEventArgs e)
@@ -52,7 +52,8 @@ namespace ShopFloor
 
         private void ClickCart(object sender, RoutedEventArgs e)
         {
-
+            CartView cart = new CartView();
+            cart.ShowDialog();
         }
     }
 }

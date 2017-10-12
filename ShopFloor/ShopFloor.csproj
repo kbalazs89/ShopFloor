@@ -92,6 +92,7 @@
     </Compile>
     <Compile Include="ProductDetailsViewModel.cs" />
     <Compile Include="ProductFormViewModel.cs" />
+    <Compile Include="StaticClass.cs" />
     <Compile Include="User.cs" />
     <Page Include="CartView.xaml">
       <SubType>Designer</SubType>

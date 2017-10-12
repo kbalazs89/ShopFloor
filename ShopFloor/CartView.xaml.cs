@@ -21,7 +21,9 @@ namespace ShopFloor
     {
         public CartView()
         {
+            CartViewModel cartMM = new CartViewModel();
             InitializeComponent();
+            DataContext = cartMM;
         }
     }
 }

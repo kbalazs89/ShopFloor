@@ -9,7 +9,7 @@ namespace ShopFloor
 {
     public class Product : BaseModel
     {
-        /*string _name;
+        string _name;
         int _price;
         int _quantity;
         string _cathegory;
@@ -23,15 +23,15 @@ namespace ShopFloor
         public string Cathegory { get { return _cathegory; } set { _cathegory = value; OnPropertyChange(); } }
         public int NrOfSeats { get { return _nrOfSeats; } set { _nrOfSeats = value; OnPropertyChange(); } }
         public int FlightRange { get { return _flightRange; } set { _flightRange = value; OnPropertyChange(); } }
-        public int NrOfEngines { get { return _nrOfEngines; } set { _nrOfEngines = value; OnPropertyChange(); } }*/
+        public int NrOfEngines { get { return _nrOfEngines; } set { _nrOfEngines = value; OnPropertyChange(); } }
 
-        public string Name { get; set; }
+        /*public string Name { get; set; }
         public int Price { get; set; }
         public int Quantity { get; set; }
         public string Cathegory { get; set; }
         public int NrOfSeats { get; set; }
         public int FlightRange { get; set; }
-        public int NrOfEngines { get; set; }
+        public int NrOfEngines { get; set; }*/
 
         public Product(ProductDBModel dbModel)
         {

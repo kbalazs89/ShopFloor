@@ -10,7 +10,7 @@ namespace ShopFloor
 {
     public class ProductDetailsViewModel
     {
-        public Product SelectedProduct { get; set; }
+       public Product SelectedProduct { get; set; }
 
         public ProductDetailsViewModel(string whoSent)
         {
@@ -21,7 +21,7 @@ namespace ShopFloor
                     SelectedProduct = new Product(product);
             }
         }
-
+        
 
     }
 }

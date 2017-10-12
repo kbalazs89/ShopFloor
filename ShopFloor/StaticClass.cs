@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace ShopFloor
 {
-    public class CartViewModel
+    public static class StaticClass
     {
-        public static ObservableCollection<Product> PurchasedProducts { get; set; } = StaticClass.PurchasedProducts;
-
-
-
+        public static ObservableCollection<Product> PurchasedProducts { get; set; } = new ObservableCollection<Product>();
     }
 }

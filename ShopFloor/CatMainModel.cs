@@ -28,7 +28,7 @@ namespace ShopFloor
          }*/
 
         public ObservableCollection<Product> ProductList { get; set; }
-        public ObservableCollection<Product> PurchasedProducts { get; set; } = new ObservableCollection<Product>();
+        //public ObservableCollection<Product> PurchasedProducts { get; set; } = new ObservableCollection<Product>();
         public Product SelectProduct { get; set; }
 
         public CatMainModel(string whoSent)
@@ -48,15 +48,16 @@ namespace ShopFloor
 
         public string AddToCart(Product selectedProduct)
         {
+           
             if (selectedProduct.Quantity == 0)
                 return "Not enough stock";
             var product = FindProduct(SelectProduct.Name);
             if(product == null)
-            PurchasedProducts.Add(new Product
+            StaticClass.PurchasedProducts.Add(new Product
             {
                 Name = selectedProduct.Name,
                 Price = selectedProduct.Price,
-                Quantity = selectedProduct.Quantity,
+                Quantity = 1,
                 Cathegory = selectedProduct.Cathegory,
                 NrOfSeats = selectedProduct.NrOfSeats,
                 FlightRange = selectedProduct.FlightRange,
@@ -68,7 +69,7 @@ namespace ShopFloor
             }
             foreach (var prod in ProductList)
             {
-                if (selectedProduct.Name == prod.Name)
+                if (selectedProduct.Name == prod.Name && selectedProduct.Price == prod.Price)
                     selectedProduct.Quantity--;
             }
             return null;
@@ -77,7 +78,7 @@ namespace ShopFloor
 
         Product FindProduct(string name)
         {
-            foreach (var product in PurchasedProducts)
+            foreach (var product in StaticClass.PurchasedProducts)
                 if (product.Name == name)
                     return product;
             return null;

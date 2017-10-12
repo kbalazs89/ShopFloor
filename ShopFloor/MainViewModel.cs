@@ -12,6 +12,7 @@ namespace ShopFloor
     {
        // public ObservableCollection<Product> ProductList { get; set; }
         //public IEnumerable<ProductDBModel> ProductList { get; set; }
+
         public Product SelectProduct { get; set; }
         public User User { get; set; }
         

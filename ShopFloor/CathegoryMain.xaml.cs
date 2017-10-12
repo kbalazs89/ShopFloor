@@ -22,7 +22,7 @@ namespace ShopFloor
     {
         public CatMainModel catMain;
         public Product selectedProduct;
-        public ProductDetailsViewModel pDVM;
+        //public ProductDetailsViewModel pDVM;
 
         public CathegoryMain(Button sender)
         {
