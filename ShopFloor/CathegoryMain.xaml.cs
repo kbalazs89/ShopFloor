@@ -32,6 +32,8 @@ namespace ShopFloor
             catMain = new CatMainModel(whoSent);
             DataContext = catMain;
             //MessageBox.Show(catMain.UserInCat.Username);
+            if (!catMain.UserInCat.Admin)
+                DeleteButton.Visibility = Visibility.Hidden;
         }
 
         private void AddCartClick(object sender, RoutedEventArgs e)
@@ -48,7 +50,7 @@ namespace ShopFloor
         private void DeleteClick(object sender, RoutedEventArgs e)
         {
             catMain.DeleteProduct(selectedProduct);
-            MessageBox.Show("Successful! The item will disappear when you restart the application");
+            MessageBox.Show("Successful!");
             
         }
 
@@ -61,7 +63,9 @@ namespace ShopFloor
 
         private void ClickModify(object sender, RoutedEventArgs e)
         {
-
+            ProductFormViewModel viewModel = new ProductFormViewModel(selectedProduct) { IsNew = false };
+            NewProductView newProduct = new NewProductView(true) { DataContext = viewModel };
+            newProduct.ShowDialog();
         }
 
 

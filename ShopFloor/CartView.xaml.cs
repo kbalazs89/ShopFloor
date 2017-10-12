@@ -33,5 +33,14 @@ namespace ShopFloor
             MessageBox.Show("Sikeres vásárlás");
             Close();
         }
+
+        private void ClearClick(object sender, RoutedEventArgs e)
+        {
+            CartViewModel cartMM = new CartViewModel();
+            cartMM.ClearCart();
+            MessageBox.Show("Kosár ürítve!");
+            Close();
+
+        }
     }
 }

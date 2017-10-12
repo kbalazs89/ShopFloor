@@ -70,6 +70,25 @@ namespace ShopFloor.dal
             _ctx.SaveChanges();
         }
 
+        public void ModifyProduct(string name, int price, int quantity, string cathegory, int nrOfSeats, int flightRange, int nrOfEngines)
+        {
+            foreach (var product in _ctx.Products)
+            {
+                if(name == product.Name)
+                {
+                    product.Name = name;
+                    product.Price = price;
+                    product.Quantity = quantity;
+                    product.Cathegory = cathegory;
+                    product.NrOfSeats = nrOfSeats;
+                    product.FlightRange = flightRange;
+                    product.NrOfEngines = nrOfEngines;
+
+                }
+            }
+            _ctx.SaveChanges();
+        }
+
         public void DeleteProduct(string name, int price, int nrOfSeats)
         {
             foreach (var prod in _ctx.Products)

@@ -33,6 +33,8 @@ namespace ShopFloor
                 User = loginView.ViewModel.AuthenticatedUser
             };
             DataContext = _vm;
+            if (!_vm.User.Admin)
+                AddProductButton.Visibility = Visibility.Hidden;
         }
 
 
@@ -45,8 +47,8 @@ namespace ShopFloor
 
         private void AddProductClick(object sender, RoutedEventArgs e)
         {
-            ProductFormViewModel viewModel = new ProductFormViewModel(new Product());
-            NewProductView newProduct = new NewProductView { DataContext = viewModel };
+            ProductFormViewModel viewModel = new ProductFormViewModel(new Product()) { IsNew = true };
+            NewProductView newProduct = new NewProductView(false) { DataContext = viewModel};
             newProduct.ShowDialog();
         }
 

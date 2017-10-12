@@ -27,6 +27,7 @@ namespace ShopFloor
                 ProductList.Add(new Product(product));
             }*/
             //var manager = new DataManager();
+            
           
         }
 

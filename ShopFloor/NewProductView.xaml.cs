@@ -19,25 +19,44 @@ namespace ShopFloor
     /// </summary>
     public partial class NewProductView : Window
     {
-        public NewProductView()
+
+        public NewProductView(bool changed)
         {
-            InitializeComponent();
+            if (!changed)
+            {
+                InitializeComponent();
+                NameText.IsEnabled = true;
+            }
+            else
+            {
+                InitializeComponent();
+                NameText.IsEnabled = false;
+            }
+
         }
 
-
+        
 
             private void SubmitClick(object sender, RoutedEventArgs e)
             {
-                var productVM = (ProductFormViewModel)DataContext;
-            productVM.AddProduct(productVM.Product);
-                
+            var productVM = (ProductFormViewModel)DataContext;
+            if (productVM.IsNew)
+            {
+                productVM.AddProduct(productVM.Product);
+
                 if (!productVM.ProductValidate())
                 {
                     MessageBox.Show("Hibás adatbevitel");
                     return;
                 }
+            }
+            else
+                productVM.ModifyProduct(productVM.Product);
+                
             MessageBox.Show("Sikeres mentés");
                 Close();
           }
+
+
     }
 }
