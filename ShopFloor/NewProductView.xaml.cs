@@ -35,8 +35,6 @@ namespace ShopFloor
 
         }
 
-        
-
             private void SubmitClick(object sender, RoutedEventArgs e)
             {
             var productVM = (ProductFormViewModel)DataContext;

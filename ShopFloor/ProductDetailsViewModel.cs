@@ -20,6 +20,7 @@ namespace ShopFloor
                 if (whoSent == product.Name)
                     SelectedProduct = new Product(product);
             }
+
         }
         
 

@@ -20,12 +20,14 @@ namespace ShopFloor
     public partial class ProductDetailsView : Window
     {
         public ProductDetailsViewModel pDVM;
+        
 
         public ProductDetailsView(Product Product)
         {
             string whoSent = Product.Name;
             InitializeComponent();
             pDVM = new ProductDetailsViewModel(whoSent);
+            
             DataContext = pDVM;
 
         }

@@ -5,20 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShopFloor"
         mc:Ignorable="d"
-        Title="ProductDetailsView" Height="601.003" Width="399.2">
+        Title="ProductDetailsView" Height="469.003" Width="401.6">
     <Grid Margin="0,0,-0.2,4.8">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFCFC4EA" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <!--<ListBox   HorizontalAlignment="Left" Height="512" Margin="10,49,0,0" VerticalAlignment="Top" Width="235" Grid.ColumnSpan="2">
             <ListBox.ItemTemplate >
                 <DataTemplate >-->
-                    <StackPanel >
-                        <Label Content="{Binding SelectedProduct.Name}"/>
-                        <Label Content="{Binding SelectedProduct.Price}" FontSize="11" ContentStringFormat="0 M USD"/>
-                        <Label Content="{Binding SelectedProduct.Quantity}" FontSize="11" ContentStringFormat="0 pcs"/>
-                        <Label Content="{Binding SelectedProduct.Cathegory}"/>
-                        <Label Content="{Binding SelectedProduct.NrOfSeats}"/>
-                        <Label Content="{Binding SelectedProduct.FlightRange}"/>
-                        <Label Content="{Binding SelectedProduct.NrOfEngines}"/>
-                    </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="245*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label x:Name="LabelName" Content="{Binding SelectedProduct.Name}"   HorizontalAlignment="Left" Height="25" Margin="215,50.6,0,0" VerticalAlignment="Top" Width="166" Grid.Row="1"/>
+        <Label Content="Price:" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label Content="{Binding SelectedProduct.Price}" HorizontalAlignment="Left" Height="25" Margin="215,91.8,0,0" VerticalAlignment="Top" Width="166" Grid.Row="1"/>
+        <Label Content="Quantity:" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label Content="{Binding SelectedProduct.Quantity}" HorizontalAlignment="Left" Height="25" Margin="215,131.8,0,0" VerticalAlignment="Top" Width="166" Grid.Row="1"/>
+        <Label Content="Category:" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label Content="{Binding SelectedProduct.Cathegory}"  HorizontalAlignment="Left" Margin="215,172.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166" Height="25"/>
+        <Label Content="Number of seats:" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label Content="{Binding SelectedProduct.NrOfSeats}" HorizontalAlignment="Left" Height="25" Margin="215,211.8,0,0"  VerticalAlignment="Top" Width="166" Grid.Row="1"/>
+        <Label Content="Flight Range:" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label Content="{Binding SelectedProduct.FlightRange}" HorizontalAlignment="Left" Height="25" Margin="215,251.8,0,0"  VerticalAlignment="Top" Width="166" Grid.Row="1"/>
+        <Label Content="Number of engines:" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label Content="{Binding SelectedProduct.NrOfEngines}" HorizontalAlignment="Left" Height="25" Margin="215,291.8,0,0" VerticalAlignment="Top" Width="166" Grid.Row="1"/>
+       
         <!--   </DataTemplate>
            </ListBox.ItemTemplate>
         </ListBox>-->
