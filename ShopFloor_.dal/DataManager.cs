@@ -118,7 +118,7 @@ namespace ShopFloor.dal
         /// <summary>
         /// Deletes the records from the product DB
         /// </summary>
-        public void BuyProduct(string name, int price, int quantity, int nrOfSeats, int flightRange, string username)
+        public bool BuyProduct(string name, int price, int quantity, int nrOfSeats, int flightRange, string username)
         {
             SumPrice = 0;
             foreach (var prod in _ctx.Products)
@@ -132,9 +132,13 @@ namespace ShopFloor.dal
             foreach (var user in _ctx.Users)
             {
                 if (username == user.Username)
-                    user.Cash = user.Cash - SumPrice;
+                    if (user.Cash > SumPrice)
+                        user.Cash = user.Cash - SumPrice;
+                    else
+                        return false;
             }
             _ctx.SaveChanges();
+            return true;
         }
 
         /// <summary>

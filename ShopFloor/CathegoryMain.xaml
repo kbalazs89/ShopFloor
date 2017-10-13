@@ -8,24 +8,30 @@
         mc:Ignorable="d"
         Title="Category" Height="534.149" Width="382.842">
     <Grid Margin="0,0,-0.2,4.8">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF99B4D1" Offset="0.017"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="178*"/>
             <ColumnDefinition Width="199*"/>
         </Grid.ColumnDefinitions>
-        <ListBox SelectedItem="{Binding SelectProduct}" ItemsSource="{Binding ProductList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="389" Margin="12,60,0,0" VerticalAlignment="Top" Width="235" Grid.ColumnSpan="2" SelectionChanged="SelectedClick" MouseDoubleClick="WatchProductDetails">
+        <ListBox SelectedItem="{Binding SelectProduct}" ItemsSource="{Binding ProductList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="389" Margin="12,60,0,0" VerticalAlignment="Top" Width="235" Grid.ColumnSpan="2" SelectionChanged="SelectedClick" MouseDoubleClick="WatchProductDetails" Background="{x:Null}" BorderThickness="0,0,3,0">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <Label Content="{Binding Name}"/>
-                        <Label Content="{Binding Price}" FontSize="11" ContentStringFormat="0 M USD"/>
-                        <Label Content="{Binding Quantity}" FontSize="11" ContentStringFormat="0 pcs"/>
+                    <StackPanel Background="{x:Null}">
+                        <Label Content="{Binding Name}" FontWeight="Bold" FontSize="14" FontFamily="Bookman Old Style" />
+                        <Label Content="{Binding Price}" FontSize="11" ContentStringFormat="0 M USD" FontFamily="Bookman Old Style"/>
+                        <Label Content="{Binding Quantity}" FontSize="11" ContentStringFormat="0 pcs" FontFamily="Bookman Old Style" BorderThickness="0"/>
 
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button Content="Add to cart" Grid.Column="1" HorizontalAlignment="Left" Margin="96.4,65,0,0" VerticalAlignment="Top" Width="75" Click="AddCartClick"/>
-        <Button x:Name="DeleteButton" Content="Delete item" Grid.Column="1" HorizontalAlignment="Left" Margin="96.4,157,0,0" VerticalAlignment="Top" Width="75" Click="DeleteClick"/>
-        <Button x:Name="ModifyButton" Content="Modify item" Grid.Column="1" HorizontalAlignment="Left" Margin="96.4,111,0,0" VerticalAlignment="Top" Width="75" Click="ClickModify"/>
+        <Button Content="Add to cart" Grid.Column="1" HorizontalAlignment="Left" Margin="96.4,65,0,0" VerticalAlignment="Top" Width="75" Click="AddCartClick" Background="{x:Null}" BorderThickness="0,0,3,0"/>
+        <Button x:Name="DeleteButton" Content="Delete item" Grid.Column="1" HorizontalAlignment="Left" Margin="96.4,157,0,0" VerticalAlignment="Top" Width="75" Click="DeleteClick" Background="{x:Null}" BorderThickness="0,0,3,0"/>
+        <Button x:Name="ModifyButton" Content="Modify item" Grid.Column="1" HorizontalAlignment="Left" Margin="96.4,111,0,0" VerticalAlignment="Top" Width="75" Click="ClickModify" Background="{x:Null}" BorderThickness="0,0,3,0"/>
     </Grid>
 </Window>

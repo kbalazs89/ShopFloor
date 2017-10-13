@@ -40,9 +40,11 @@ namespace ShopFloor
         {
             if (ProductValidate())
             {
+                var cart = new CartViewModel("alter");
                 var manager = new DataManager();
                 manager.ModifyProduct(Product.Name, Product.Price, Product.Quantity, Product.Cathegory, Product.NrOfSeats, Product.FlightRange, Product.NrOfEngines);
                 Error = false;
+                cart.ClearCart();
             }
             else
                 Error = true;

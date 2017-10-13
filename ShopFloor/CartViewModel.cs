@@ -26,21 +26,28 @@ namespace ShopFloor
                 CartPrice += product.Price * product.Quantity;
             }
         }
+        
+        public CartViewModel(string alter)
+        {
+        }
 
         /// <summary>
         /// Empty Productlist and call DataManager's purchase-method
         /// </summary>
-        public void Purchase()
+        public bool Purchase()
         {
             var manager = new DataManager();
             foreach (var product in PurchasedProducts)
             {
-                manager.BuyProduct(product.Name, product.Price, product.Quantity, product.NrOfSeats, product.FlightRange, UserCart.Username);
-                UserCart.Cash -= manager.SumPrice;
+                if (manager.BuyProduct(product.Name, product.Price, product.Quantity, product.NrOfSeats, product.FlightRange, UserCart.Username))
+                    UserCart.Cash -= manager.SumPrice;
+                else
+                    return false;
             }
             
             PurchasedProducts = new ObservableCollection<Product>();
             StaticClass.PurchasedProducts = new ObservableCollection<Product>();
+            return true;
         }
 
         /// <summary>

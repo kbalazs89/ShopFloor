@@ -15,9 +15,9 @@
     <Grid>
         <TextBox Text="{Binding Username}" HorizontalAlignment="Left" Height="23" Margin="114,86,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="White"/>
         <PasswordBox x:Name="passwordTextbox" HorizontalAlignment="Left" Margin="114,137,0,0" VerticalAlignment="Top" Width="120" Height="23"/>
-        <Button Content="Get On Board!" IsDefault ="True" HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top" Width="155" RenderTransformOrigin="0.51,0.467" Height="40" Click="LoginClick" FontFamily="Bookman Old Style"/>
-        <Button Content="Get Bored :(" HorizontalAlignment="Left" Margin="182,184,0,0" VerticalAlignment="Top" Width="155" Height="40" Click="LogoutClick" FontFamily="Bookman Old Style"/>
-        <Button Content="First flyer?" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Width="327" Click="RegisterClick" Height="39" FontFamily="Bookman Old Style"/>
+        <Button Content="Get On Board!" IsDefault ="True" HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top" Width="155" RenderTransformOrigin="0.51,0.467" Height="40" Click="LoginClick" FontFamily="Bookman Old Style" BorderThickness="0"/>
+        <Button Content="Get Bored :(" HorizontalAlignment="Left" Margin="182,184,0,0" VerticalAlignment="Top" Width="155" Height="40" Click="LogoutClick" FontFamily="Bookman Old Style" BorderThickness="0"/>
+        <Button Content="First flyer?" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Width="327" Click="RegisterClick" Height="39" FontFamily="Bookman Old Style" BorderThickness="0"/>
         <Label Content="Username" HorizontalAlignment="Left" Margin="25,86,0,0" VerticalAlignment="Top" Height="23" FontFamily="Simplified Arabic Fixed"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="25,137,0,0" VerticalAlignment="Top" Height="23" FontFamily="Simplified Arabic Fixed"/>
 

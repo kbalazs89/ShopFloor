@@ -5,21 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShopFloor"
         mc:Ignorable="d"
-        Title="CartView" Height="568.394" Width="434.4">
+        Title="Your cart" Height="568.394" Width="434.4">
     <Grid>
-        <ListBox ItemsSource="{Binding PurchasedProducts}" HorizontalAlignment="Left" Height="408" Margin="10,56,0,0" VerticalAlignment="Top" Width="235">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FFF1D240"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <ListBox ItemsSource="{Binding PurchasedProducts}" HorizontalAlignment="Left" Height="408" Margin="10,56,0,0" VerticalAlignment="Top" Width="235" Background="{x:Null}" BorderThickness="0,0,3,0">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <Label Content="{Binding Name}"/>
-                        <Label Content="{Binding Price}" FontSize="11" ContentStringFormat="0 M USD"/>
-                        <Label Content="{Binding Quantity}" FontSize="11" ContentStringFormat="0 pcs"/>
+                        <Label Content="{Binding Name}" FontWeight="Bold" FontSize="14" FontFamily="Bookman Old Style" />
+                        <Label Content="{Binding Price}" FontFamily="Bookman Old Style" FontSize="11" ContentStringFormat="0 M USD"/>
+                        <Label Content="{Binding Quantity}" FontFamily="Bookman Old Style" FontSize="11" ContentStringFormat="0 pcs"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button Content="Purchase!" HorizontalAlignment="Left" Margin="322,73,0,0" VerticalAlignment="Top" Width="75" Click="PurchaseClick"/>
-        <Button Content="Empty Cart" HorizontalAlignment="Left" Margin="322,97,0,0" VerticalAlignment="Top" Width="75" Click="ClearClick"/>
-        <Label Content="{Binding CartPrice}" ContentStringFormat="0 M USD" HorizontalAlignment="Left" Margin="322,43,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Purchase!" HorizontalAlignment="Left" Margin="311,73,0,0" VerticalAlignment="Top" Width="86" Click="PurchaseClick" FontFamily="Bookman Old Style" Height="20" Background="{x:Null}" BorderThickness="0,0,3,0"/>
+        <Button Content="Empty Cart" HorizontalAlignment="Left" Margin="311,113,0,0" VerticalAlignment="Top" Width="86" Click="ClearClick" FontFamily="Bookman Old Style" Height="20" Background="{x:Null}" BorderThickness="0,0,3,0"/>
+        <Label Content="{Binding CartPrice}" ContentStringFormat="0 M USD" HorizontalAlignment="Left" Margin="311,10,0,0" VerticalAlignment="Top" Width="86" Height="29" BorderThickness="0,0,3,0" FontWeight="Bold"/>
     </Grid>
 </Window>

@@ -20,21 +20,21 @@
             <RowDefinition Height="24*"/>
             <RowDefinition Height="245*"/>
         </Grid.RowDefinitions>
-        <Label Content="Name:" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <Label x:Name="LabelName" Content="{Binding SelectedProduct.Name}"   HorizontalAlignment="Left" Height="25" Margin="215,50.6,0,0" VerticalAlignment="Top" Width="166" Grid.Row="1"/>
-        <Label Content="Price:" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <Label Content="{Binding SelectedProduct.Price}" HorizontalAlignment="Left" Height="25" Margin="215,91.8,0,0" VerticalAlignment="Top" Width="166" Grid.Row="1"/>
-        <Label Content="Quantity:" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <Label Content="{Binding SelectedProduct.Quantity}" HorizontalAlignment="Left" Height="25" Margin="215,131.8,0,0" VerticalAlignment="Top" Width="166" Grid.Row="1"/>
-        <Label Content="Category:" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <Label Content="{Binding SelectedProduct.Cathegory}"  HorizontalAlignment="Left" Margin="215,172.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166" Height="25"/>
-        <Label Content="Number of seats:" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <Label Content="{Binding SelectedProduct.NrOfSeats}" HorizontalAlignment="Left" Height="25" Margin="215,211.8,0,0"  VerticalAlignment="Top" Width="166" Grid.Row="1"/>
-        <Label Content="Flight Range:" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <Label Content="{Binding SelectedProduct.FlightRange}" HorizontalAlignment="Left" Height="25" Margin="215,251.8,0,0"  VerticalAlignment="Top" Width="166" Grid.Row="1"/>
-        <Label Content="Number of engines:" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <Label Content="{Binding SelectedProduct.NrOfEngines}" HorizontalAlignment="Left" Height="25" Margin="215,291.8,0,0" VerticalAlignment="Top" Width="166" Grid.Row="1"/>
-       
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="10,50.6,0,0" VerticalAlignment="Top" Grid.Row="1" FontFamily="Bookman Old Style" Width="101" FontWeight="Bold" BorderThickness="0,0,2,0"/>
+        <Label x:Name="LabelName" Content="{Binding SelectedProduct.Name}"   HorizontalAlignment="Left" Height="25" Margin="215,50.6,0,0" VerticalAlignment="Top" Width="166" Grid.Row="1" FontFamily="Bookman Old Style" FontWeight="Bold" BorderThickness="0,0,2,0"/>
+        <Label Content="Price:" HorizontalAlignment="Left" Margin="10,89.6,0,0" VerticalAlignment="Top" Grid.Row="1" FontFamily="Bookman Old Style" Width="101" BorderThickness="0,0,2,0"/>
+        <Label Content="{Binding SelectedProduct.Price}" HorizontalAlignment="Left" Height="25" Margin="215,91.8,0,0" VerticalAlignment="Top" Width="166" Grid.Row="1" FontFamily="Bookman Old Style" BorderThickness="0,0,2,0"/>
+        <Label Content="Quantity:" HorizontalAlignment="Left" Margin="10,129.6,0,0" VerticalAlignment="Top" Grid.Row="1" Width="101" FontFamily="Bookman Old Style" BorderThickness="0,0,2,0"/>
+        <Label Content="{Binding SelectedProduct.Quantity}" HorizontalAlignment="Left" Height="25" Margin="215,131.8,0,0" VerticalAlignment="Top" Width="166" Grid.Row="1" FontFamily="Bookman Old Style" BorderThickness="0,0,2,0"/>
+        <Label Content="Category:" HorizontalAlignment="Left" Margin="10,169.6,0,0" VerticalAlignment="Top" Grid.Row="1" Width="101" FontFamily="Bookman Old Style" BorderThickness="0,0,2,0"/>
+        <Label Content="{Binding SelectedProduct.Cathegory}"  HorizontalAlignment="Left" Margin="215,172.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166" Height="25" FontFamily="Bookman Old Style" BorderThickness="0,0,2,0"/>
+        <Label Content="Number of seats:" HorizontalAlignment="Left" Margin="10,209.6,0,0" VerticalAlignment="Top" Grid.Row="1" Width="115" FontFamily="Bookman Old Style" BorderThickness="0,0,2,0"/>
+        <Label Content="{Binding SelectedProduct.NrOfSeats}" HorizontalAlignment="Left" Height="25" Margin="215,211.8,0,0"  VerticalAlignment="Top" Width="166" Grid.Row="1" FontFamily="Bookman Old Style" BorderThickness="0,0,2,0"/>
+        <Label Content="Flight Range:" HorizontalAlignment="Left" Margin="10,249.6,0,0" VerticalAlignment="Top" Grid.Row="1" Width="101" FontFamily="Bookman Old Style" BorderThickness="0,0,2,0"/>
+        <Label Content="{Binding SelectedProduct.FlightRange}" HorizontalAlignment="Left" Height="25" Margin="215,251.8,0,0"  VerticalAlignment="Top" Width="166" Grid.Row="1" FontFamily="Bookman Old Style" BorderThickness="0,0,2,0"/>
+        <Label Content="Number of engines:" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top" Grid.Row="1" FontFamily="Bookman Old Style" BorderThickness="0,0,2,0"/>
+        <Label Content="{Binding SelectedProduct.NrOfEngines}" HorizontalAlignment="Left" Height="25" Margin="215,291.8,0,0" VerticalAlignment="Top" Width="166" Grid.Row="1" FontFamily="Bookman Old Style" BorderThickness="0,0,2,0"/>
+
         <!--   </DataTemplate>
            </ListBox.ItemTemplate>
         </ListBox>-->

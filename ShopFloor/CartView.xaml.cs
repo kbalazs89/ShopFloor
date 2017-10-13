@@ -29,9 +29,13 @@ namespace ShopFloor
         private void PurchaseClick(object sender, RoutedEventArgs e)
         {
             CartViewModel cartMM = new CartViewModel();
-            cartMM.Purchase();
-            MessageBox.Show("Sikeres vásárlás");
-            Close();
+            if (cartMM.Purchase())
+            {
+                MessageBox.Show("Sikeres vásárlás");
+                Close();
+            }
+            else
+                MessageBox.Show("Not enough cash :( ");
         }
 
         private void ClearClick(object sender, RoutedEventArgs e)
