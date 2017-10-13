@@ -9,7 +9,7 @@ namespace ShopFloor.dal
     public class DataManager
     {
         readonly Cont _ctx;
-        public int SumPrice2 { get; set; }
+        public int SumPrice { get; set; }
 
         /// <summary>
         /// Constructor, make instance of Cont class to connect the DB
@@ -17,7 +17,6 @@ namespace ShopFloor.dal
         public DataManager()
         {
             _ctx = new Cont();
-
         }
 
 
@@ -115,26 +114,26 @@ namespace ShopFloor.dal
                       
 
         }
-
+ 
+        /// <summary>
+        /// Deletes the records from the product DB
+        /// </summary>
         public void BuyProduct(string name, int price, int quantity, int nrOfSeats, int flightRange, string username)
         {
-            int sumPrice = 0;
-
+            SumPrice = 0;
             foreach (var prod in _ctx.Products)
             {
                 if (name == prod.Name && price == prod.Price && nrOfSeats == prod.NrOfSeats && flightRange == prod.FlightRange)
                 {
                     prod.Quantity -= quantity;
-                    sumPrice = sumPrice + (price * quantity);
+                    SumPrice = SumPrice + (price * quantity);
                 }
             }
-
             foreach (var user in _ctx.Users)
             {
                 if (username == user.Username)
-                    user.Cash = user.Cash - sumPrice;
+                    user.Cash = user.Cash - SumPrice;
             }
-            SumPrice2 = sumPrice;
             _ctx.SaveChanges();
         }
 
@@ -155,11 +154,8 @@ namespace ShopFloor.dal
                 _ctx.SaveChanges();
                 return true;
             }
-
             else
                 return false;
         }
-
-
     }
 }

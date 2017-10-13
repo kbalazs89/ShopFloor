@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ShopFloor"
         xmlns:base="clr-namespace:ShopFloor"
         mc:Ignorable="d"
-        Title="CathegoryMain" Height="534.149" Width="382.842">
+        Title="Category" Height="534.149" Width="382.842">
     <Grid Margin="0,0,-0.2,4.8">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="178*"/>
@@ -26,6 +26,6 @@
         </ListBox>
         <Button Content="Add to cart" Grid.Column="1" HorizontalAlignment="Left" Margin="96.4,65,0,0" VerticalAlignment="Top" Width="75" Click="AddCartClick"/>
         <Button x:Name="DeleteButton" Content="Delete item" Grid.Column="1" HorizontalAlignment="Left" Margin="96.4,157,0,0" VerticalAlignment="Top" Width="75" Click="DeleteClick"/>
-        <Button Content="Modify item" Grid.Column="1" HorizontalAlignment="Left" Margin="96.4,111,0,0" VerticalAlignment="Top" Width="75" Click="ClickModify"/>
+        <Button x:Name="ModifyButton" Content="Modify item" Grid.Column="1" HorizontalAlignment="Left" Margin="96.4,111,0,0" VerticalAlignment="Top" Width="75" Click="ClickModify"/>
     </Grid>
 </Window>

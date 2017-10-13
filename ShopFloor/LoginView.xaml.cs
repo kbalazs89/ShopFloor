@@ -19,6 +19,9 @@ namespace ShopFloor
         readonly bool _onLogout;
         public LoginViewModel ViewModel { get; }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public LoginView(bool onLogout = false)
         {
             _onLogout = onLogout;
@@ -56,6 +59,9 @@ namespace ShopFloor
             regView.ShowDialog();
         }
 
+        /// <summary>
+        /// To drag the window
+        /// </summary>
         private void DragWindow(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)

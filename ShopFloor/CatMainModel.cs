@@ -16,6 +16,7 @@ namespace ShopFloor
         public ObservableCollection<Product> ProductList { get; set; }
         public Product SelectProduct { get; set; }
         public User UserInCat = StaticClass.LoggedUser;
+
         /// <summary>
         /// Constructor, called from Main Window code-behind. List the products with Datamanager's GetProduct method and filter them
         /// </summary>
@@ -36,7 +37,7 @@ namespace ShopFloor
         {
             if (selectedProduct == null)
                 return "Please select a product first";
-            if (selectedProduct.Quantity >= 0)
+            if (selectedProduct.Quantity <= 0)
                 return "Not enough stock";
             var product = FindProduct(SelectProduct.Name);
             if(product == null)

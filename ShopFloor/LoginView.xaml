@@ -7,19 +7,19 @@
         mc:Ignorable="d"
         Title="Check in" Height="338.947" Width="354" MouseDown="DragWindow" AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize" >
     <Window.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        <LinearGradientBrush EndPoint="0.2,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="0"/>
-            <GradientStop Color="#FF6CBDCD" Offset="1"/>
+            <GradientStop Color="White" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
         <TextBox Text="{Binding Username}" HorizontalAlignment="Left" Height="23" Margin="114,86,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="White"/>
         <PasswordBox x:Name="passwordTextbox" HorizontalAlignment="Left" Margin="114,137,0,0" VerticalAlignment="Top" Width="120" Height="23"/>
-        <Button Content="Get On Board!" IsDefault ="True" HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top" Width="155" RenderTransformOrigin="0.51,0.467" Height="50" Click="LoginClick"/>
-        <Button Content="Get Bored :(" HorizontalAlignment="Left" Margin="182,184,0,0" VerticalAlignment="Top" Width="155" Height="50" Click="LogoutClick"/>
-        <Button Content="First flyer?" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Width="327" Click="RegisterClick" Height="39"/>
-        <Label Content="Username" HorizontalAlignment="Left" Margin="25,86,0,0" VerticalAlignment="Top" Height="23" FontSize="10"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="25,137,0,0" VerticalAlignment="Top" Height="23" FontSize="10"/>
+        <Button Content="Get On Board!" IsDefault ="True" HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top" Width="155" RenderTransformOrigin="0.51,0.467" Height="40" Click="LoginClick" FontFamily="Bookman Old Style"/>
+        <Button Content="Get Bored :(" HorizontalAlignment="Left" Margin="182,184,0,0" VerticalAlignment="Top" Width="155" Height="40" Click="LogoutClick" FontFamily="Bookman Old Style"/>
+        <Button Content="First flyer?" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Width="327" Click="RegisterClick" Height="39" FontFamily="Bookman Old Style"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="25,86,0,0" VerticalAlignment="Top" Height="23" FontFamily="Simplified Arabic Fixed"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="25,137,0,0" VerticalAlignment="Top" Height="23" FontFamily="Simplified Arabic Fixed"/>
 
     </Grid>
 </Window>

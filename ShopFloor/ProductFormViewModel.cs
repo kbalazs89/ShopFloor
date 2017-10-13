@@ -1,9 +1,4 @@
 ﻿using ShopFloor.dal;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopFloor
 {
@@ -53,20 +48,18 @@ namespace ShopFloor
                 Error = true;
         }
 
+        /// <summary>
+        /// Validation
+        /// </summary>
         public bool ProductValidate()
         {
             return !string.IsNullOrEmpty(Product.Name) && 
                 Product.Name.Length > 2 && 
-                (Product.Price % 1 != 0) &&
                 Product.Price > 0 && 
-                (Product.Quantity % 1 != 0) &&
                 Product.Quantity > 0 && 
                 !string.IsNullOrEmpty(Product.Cathegory) &&
-                (Product.NrOfSeats % 1 != 0) &&
                 Product.NrOfSeats > 0 &&
-                (Product.FlightRange % 1 != 0) &&
                 Product.FlightRange > 0 &&
-                (Product.NrOfEngines % 1 != 0) &&
                 Product.NrOfEngines > 0;
         }
 

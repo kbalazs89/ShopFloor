@@ -30,7 +30,10 @@ namespace ShopFloor
             catMain = new CatMainModel(whoSent);
             DataContext = catMain;
             if (!catMain.UserInCat.Admin)
+            {
                 DeleteButton.Visibility = Visibility.Hidden;
+                ModifyButton.Visibility = Visibility.Hidden;
+            }
         }
 
         /// <summary>
