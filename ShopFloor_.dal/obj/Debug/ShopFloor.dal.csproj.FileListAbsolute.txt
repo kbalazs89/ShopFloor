@@ -17,3 +17,4 @@ C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor_.dal\o
 C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor_.dal\obj\Debug\ShopFloor_.dal.Migrations.InitialCreate.resources
 C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor_.dal\obj\Debug\ShopFloor.dal.csproj.GenerateResource.Cache
 C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor_.dal\obj\Debug\ShopFloor_.dal.Migrations.Admin.resources
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\ShopFloor\ShopFloor_.dal\obj\Debug\ShopFloor_.dal.Migrations.DeletedPurchaseDB.resources

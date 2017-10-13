@@ -15,45 +15,59 @@ using System.Windows.Shapes;
 
 namespace ShopFloor
 {
-    /// <summary>
-    /// Interaction logic for CathegoryMain.xaml
-    /// </summary>
     public partial class CathegoryMain : Window
     {
         public CatMainModel catMain;
         public Product selectedProduct;
-        //public ProductDetailsViewModel pDVM;
 
+        /// <summary>
+        /// Constructor with the sender to filter for categories
+        /// </summary>
         public CathegoryMain(Button sender)
         {
-            //var _sender = sender;
             string whoSent = sender.Content.ToString();
             InitializeComponent();
             catMain = new CatMainModel(whoSent);
             DataContext = catMain;
-            //MessageBox.Show(catMain.UserInCat.Username);
             if (!catMain.UserInCat.Admin)
                 DeleteButton.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Call CatMainModel class AddToCart method with the overload of selected item
+        /// </summary>
         private void AddCartClick(object sender, RoutedEventArgs e)
         {
-            catMain.AddToCart(selectedProduct);
+            string error = catMain.AddToCart(selectedProduct);
+            if (error != null)
+                MessageBox.Show(error);
+
         }
 
+        /// <summary>
+        /// Capture the selected item to use it in other methods
+        /// </summary>
         private void SelectedClick(object sender, SelectionChangedEventArgs e)
         {
             selectedProduct = catMain.SelectProduct;
-            
         }
 
+        /// <summary>
+        /// Delete the selected record from DB
+        /// </summary>
         private void DeleteClick(object sender, RoutedEventArgs e)
         {
-            catMain.DeleteProduct(selectedProduct);
-            MessageBox.Show("Successful!");
+            string error = catMain.DeleteProduct(selectedProduct);
+            if (error != null)
+                MessageBox.Show(error);
+            else
+                MessageBox.Show("Successfully deleted!");
             
         }
 
+        /// <summary>
+        /// To watch all attributes of a record from product DB
+        /// </summary>
         private void WatchProductDetails(object sender, MouseButtonEventArgs e)
         {
             selectedProduct = catMain.SelectProduct;
@@ -61,21 +75,19 @@ namespace ShopFloor
             productDetails.ShowDialog();
         }
 
+        /// <summary>
+        /// Similar to AddProduct in MainWindow. Difference: IsNew property = false, and give true overload to disable "Name" textbox when NewProductView opens
+        /// </summary>
         private void ClickModify(object sender, RoutedEventArgs e)
         {
-            ProductFormViewModel viewModel = new ProductFormViewModel(selectedProduct) { IsNew = false };
-            NewProductView newProduct = new NewProductView(true) { DataContext = viewModel };
-            newProduct.ShowDialog();
-        }
-
-
-
-        /*private void Check(object sender, RoutedEventArgs e)
-        {
-            foreach (var products in catMain.PurchasedProducts)
+            if (selectedProduct != null)
             {
-                MessageBox.Show(products.Name);
+                ProductFormViewModel viewModel = new ProductFormViewModel(selectedProduct) { IsNew = false };
+                NewProductView newProduct = new NewProductView(true) { DataContext = viewModel };
+                newProduct.ShowDialog();
             }
-        }*/
+            else
+                MessageBox.Show("Please select a product first");
+        }
     }
 }

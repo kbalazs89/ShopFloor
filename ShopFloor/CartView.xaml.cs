@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 
 namespace ShopFloor
 {
-    /// <summary>
-    /// Interaction logic for CartView.xaml
-    /// </summary>
     public partial class CartView : Window
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public CartView()
         {
             CartViewModel cartMM = new CartViewModel();

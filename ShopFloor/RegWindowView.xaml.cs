@@ -27,11 +27,15 @@ namespace ShopFloor
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Submit registration
+        /// </summary
         private void ClickRegister(object sender, RoutedEventArgs e)
         {
             string password = PasswordReg.Password;
             string password2 = PasswordReg2.Password;
-            regView.Reg(password, password2);
+            string result = regView.Reg(password, password2);
+            MessageBox.Show(result);
         }
     }
 }

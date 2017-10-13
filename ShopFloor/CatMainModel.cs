@@ -13,28 +13,12 @@ namespace ShopFloor
 {
     public class CatMainModel : BaseModel
     {
-
-        /* public CatMainModel(string whoSent)
-         {
-             var manager = new DataManager();
-             string _whoSent = whoSent;
-             ProductList = new ObservableCollection<Product>();
-             var ctx = new Context();
-
-             foreach (var product in ctx.Products)
-             {
-                 if (_whoSent == product.Cathegory)
-                     ProductList.Add(new Product(product));
-             }
-         }*/
-
-        
-
         public ObservableCollection<Product> ProductList { get; set; }
-        //public ObservableCollection<Product> PurchasedProducts { get; set; } = new ObservableCollection<Product>();
         public Product SelectProduct { get; set; }
         public User UserInCat = StaticClass.LoggedUser;
-
+        /// <summary>
+        /// Constructor, called from Main Window code-behind. List the products with Datamanager's GetProduct method and filter them
+        /// </summary>
         public CatMainModel(string whoSent)
         {
             ProductList = new ObservableCollection<Product>();
@@ -45,15 +29,14 @@ namespace ShopFloor
                     ProductList.Add(new Product(product));
             }
         }
-
-        public CatMainModel()
-        { }
-
-
+        /// <summary>
+        /// Add product to productlist and call DataManager to insert new record to DB. Validation: item must be selected and stock must be > 0
+        /// </summary>
         public string AddToCart(Product selectedProduct)
         {
-           
-            if (selectedProduct.Quantity == 0)
+            if (selectedProduct == null)
+                return "Please select a product first";
+            if (selectedProduct.Quantity >= 0)
                 return "Not enough stock";
             var product = FindProduct(SelectProduct.Name);
             if(product == null)
@@ -80,6 +63,9 @@ namespace ShopFloor
 
         }
 
+        /// <summary>
+        /// Check if the product is already in the cart. AddToCart method use it
+        /// </summary>
         Product FindProduct(string name)
         {
             foreach (var product in StaticClass.PurchasedProducts)
@@ -88,11 +74,17 @@ namespace ShopFloor
             return null;
         }
 
-        public void DeleteProduct(Product selectedProduct)
+        /// <summary>
+        /// Delete product from list and call DataManager to delete record from database
+        /// </summary>
+        public string DeleteProduct(Product selectedProduct)
         {
+            if (selectedProduct == null)
+                return "Please select a product first";
             var manager = new DataManager();
-            manager.DeleteProduct(selectedProduct.Name, selectedProduct.Price, selectedProduct.NrOfSeats);
+            manager.DeleteProduct(selectedProduct.Name);
             ProductList.Remove(SelectProduct);
+            return null;
         }
 
     }

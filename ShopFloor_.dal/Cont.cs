@@ -22,12 +22,6 @@ namespace ShopFloor.dal
 
         public virtual DbSet<ProductDBModel> Products { get; set; }
         public virtual DbSet<UserDBModel> Users { get; set; }
-        public virtual DbSet<PurchaseDBModel> Purchases { get; set; }
+        //public virtual DbSet<PurchaseDBModel> Purchases { get; set; }
     }
-
-    //public class MyEntity
-    //{
-    //    public int Id { get; set; }
-    //    public string Name { get; set; }
-    //}
 }

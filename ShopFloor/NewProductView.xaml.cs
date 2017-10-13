@@ -35,26 +35,32 @@ namespace ShopFloor
 
         }
 
-            private void SubmitClick(object sender, RoutedEventArgs e)
-            {
+        private void SubmitClick(object sender, RoutedEventArgs e)
+        {
             var productVM = (ProductFormViewModel)DataContext;
             if (productVM.IsNew)
             {
-                productVM.AddProduct(productVM.Product);
-
-                if (!productVM.ProductValidate())
+                if (!productVM.AddProduct(productVM.Product))
                 {
-                    MessageBox.Show("Hibás adatbevitel");
+                    MessageBox.Show("Incorrect data. Check your entries again");
                     return;
                 }
+                MessageBox.Show("Sikeres mentés");
+
             }
             else
+            {
                 productVM.ModifyProduct(productVM.Product);
-                
-            MessageBox.Show("Sikeres mentés");
-                Close();
-          }
-
+                if (!productVM.Error)
+                {
+                    MessageBox.Show("Sikeres mentés");
+                }
+                else
+                    MessageBox.Show("Invalid Data");
+                return;
+            }
+            Close();
+        }
 
     }
 }

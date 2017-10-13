@@ -14,14 +14,13 @@ using System.Windows.Shapes;
 
 namespace ShopFloor
 {
-    /// <summary>
-    /// Interaction logic for ProductDetailsView.xaml
-    /// </summary>
     public partial class ProductDetailsView : Window
     {
         public ProductDetailsViewModel pDVM;
         
-
+        /// <summary>
+        /// Constructor with the selected product
+        /// </summary>
         public ProductDetailsView(Product Product)
         {
             string whoSent = Product.Name;

@@ -14,6 +14,7 @@ namespace ShopFloor
         public ObservableCollection<Product> PurchasedProducts { get; set; } = StaticClass.PurchasedProducts;
         public User UserCart = StaticClass.LoggedUser;
 
+
         public void Purchase()
         {
             var manager = new DataManager();
@@ -26,6 +27,7 @@ namespace ShopFloor
             PurchasedProducts = new ObservableCollection<Product>();
             StaticClass.PurchasedProducts = new ObservableCollection<Product>();
         }
+
 
         public void ClearCart()
         {

@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace ShopFloor
 {
-    /// <summary>
-    /// Interaction logic for LoginView.xaml
-    /// </summary>
     public partial class LoginView : Window
     {
         readonly bool _onLogout;
@@ -30,6 +27,9 @@ namespace ShopFloor
             DataContext = ViewModel;
         }
 
+        /// <summary>
+        /// "Get on board" button, to log in
+        /// </summary>
         private void LoginClick(object sender, RoutedEventArgs e)
         {
             ViewModel.Password = passwordTextbox.Password;
@@ -39,29 +39,27 @@ namespace ShopFloor
                 MessageBox.Show("Incorrect Username or Password");
         }
 
+        /// <summary>
+        /// "Get board" button to cancel log in and exit the application
+        /// </summary>
         private void LogoutClick(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult exit = MessageBox.Show("Forgot your passport?", "Logout", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
-            if (exit == MessageBoxResult.Yes)
-            {
-                System.Windows.Application.Current.Shutdown();
-            }
-            else return;
-
-
-
+                Application.Current.Shutdown();
         }
 
-        private void OnClosing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            e.Cancel = ViewModel.AuthenticatedUser == null
-                    && !_onLogout;
-        }
-
+        /// <summary>
+        /// "First flyer" button
+        /// </summary>
         private void RegisterClick(object sender, RoutedEventArgs e)
         {
             RegWindowView regView = new RegWindowView();
             regView.ShowDialog();
+        }
+
+        private void DragWindow(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                DragMove();
         }
     }
     }

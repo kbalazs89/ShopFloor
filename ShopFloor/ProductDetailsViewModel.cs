@@ -12,6 +12,9 @@ namespace ShopFloor
     {
        public Product SelectedProduct { get; set; }
 
+        /// <summary>
+        /// Constructor, selected product name loaded
+        /// </summary>
         public ProductDetailsViewModel(string whoSent)
         {
             var manager = new DataManager();
@@ -20,9 +23,6 @@ namespace ShopFloor
                 if (whoSent == product.Name)
                     SelectedProduct = new Product(product);
             }
-
         }
-        
-
     }
 }

@@ -70,6 +70,10 @@
     <Compile Include="Migrations\201710121414447_Admin.Designer.cs">
       <DependentUpon>201710121414447_Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710131510122_Deleted PurchaseDB.cs" />
+    <Compile Include="Migrations\201710131510122_Deleted PurchaseDB.Designer.cs">
+      <DependentUpon>201710131510122_Deleted PurchaseDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductDBModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710121414447_Admin.resx">
       <DependentUpon>201710121414447_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710131510122_Deleted PurchaseDB.resx">
+      <DependentUpon>201710131510122_Deleted PurchaseDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

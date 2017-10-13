@@ -9,25 +9,21 @@ namespace ShopFloor.dal
     public class DataManager
     {
         readonly Cont _ctx;
+        public int SumPrice2 { get; set; }
 
-
+        /// <summary>
+        /// Constructor, make instance of Cont class to connect the DB
+        /// </summary>
         public DataManager()
         {
             _ctx = new Cont();
-            /*if (!_ctx.Users.Any(x => x.Username == "asdf"))
-            {
-                _ctx.Users.Add(new UserDBModel
-                {
-                    Username = "asdf",
-                    Password = "asdf",
-                    Cash = 2500
-                });
-                _ctx.SaveChanges();
-            }*/
+
         }
 
 
-
+        /// <summary>
+        /// Retrieve single record from User DB
+        /// </summary>
         public UserDBModel GetUser(string username, string password)
         {
             try
@@ -41,22 +37,34 @@ namespace ShopFloor.dal
             }
         }
 
+        /// <summary>
+        /// Retrieve all products from DB. 1 overload. Called from CatMainModel and ProductDetailsViewModel
+        /// </summary>
         public IEnumerable<ProductDBModel> GetProducts(string sender)
         {
 
             return _ctx.Products.OrderBy(x => x.Name);
         }
 
-
-
+        /// <summary>
+        /// Retrieve all products from DB, no overload
+        /// </summary>
         public IEnumerable<ProductDBModel> GetProducts()
         {
 
             return _ctx.Products.OrderBy(x => x.Name);
         }
 
-        public void AddProduct(string name, int price, int quantity, string cathegory, int nrOfSeats, int flightRange, int nrOfEngines)
+        /// <summary>
+        /// Check if the record already exist, if not, add the requested record
+        /// </summary>
+        public bool AddProduct(string name, int price, int quantity, string cathegory, int nrOfSeats, int flightRange, int nrOfEngines)
         {
+            foreach (var product in _ctx.Products)
+            {
+                if (name == product.Name)
+                    return false;
+            }
             _ctx.Products.Add(new ProductDBModel
             {
                 Name= name,
@@ -68,8 +76,12 @@ namespace ShopFloor.dal
                 NrOfEngines = nrOfEngines
             });
             _ctx.SaveChanges();
+            return true;
         }
 
+        /// <summary>
+        /// Do not add new record, modify the selected one
+        /// </summary>
         public void ModifyProduct(string name, int price, int quantity, string cathegory, int nrOfSeats, int flightRange, int nrOfEngines)
         {
             foreach (var product in _ctx.Products)
@@ -89,11 +101,14 @@ namespace ShopFloor.dal
             _ctx.SaveChanges();
         }
 
-        public void DeleteProduct(string name, int price, int nrOfSeats)
+        /// <summary>
+        /// Delete record from product DB
+        /// </summary>
+        public void DeleteProduct(string name)
         {
             foreach (var prod in _ctx.Products)
             {
-                if (name == prod.Name && price == prod.Price && nrOfSeats == prod.NrOfSeats)
+                if (name == prod.Name)
                     _ctx.Products.Remove(prod);
             }
             _ctx.SaveChanges();
@@ -101,7 +116,6 @@ namespace ShopFloor.dal
 
         }
 
-        public int SumPrice2 { get; set; }
         public void BuyProduct(string name, int price, int quantity, int nrOfSeats, int flightRange, string username)
         {
             int sumPrice = 0;
@@ -124,17 +138,26 @@ namespace ShopFloor.dal
             _ctx.SaveChanges();
         }
 
-        public void Regist(string username, string password)
+        /// <summary>
+        /// RegistViewModel class calls the method to register new User in DB. Username must be unique
+        /// </summary>
+        public bool Regist(string username, string password)
         {
             if (!_ctx.Users.Any(x => x.Username == username))
+            {
                 _ctx.Users.Add(new UserDBModel
                 {
                     Username = username,
                     Password = password,
                     Cash = 10000,
-                    Admin = true
+                    Admin = false
                 });
-            _ctx.SaveChanges();
+                _ctx.SaveChanges();
+                return true;
+            }
+
+            else
+                return false;
         }
 
 
