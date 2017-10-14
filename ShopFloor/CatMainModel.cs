@@ -1,13 +1,5 @@
 ﻿using ShopFloor.dal;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
 
 namespace ShopFloor
 {
@@ -39,7 +31,7 @@ namespace ShopFloor
                 return "Please select a product first";
             if (selectedProduct.Quantity <= 0)
                 return "Not enough stock";
-            var product = FindProduct(SelectProduct.Name);
+            var product = FindProduct(selectedProduct.Name);
             if(product == null)
             StaticClass.PurchasedProducts.Add(new Product
             {

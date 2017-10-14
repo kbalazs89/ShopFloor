@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ShopFloor;
 
@@ -25,7 +23,8 @@ namespace UnitTest
                 NrOfEngines = 3
             };
             var productForm = new ProductFormViewModel(product);
-            bool added = productForm.AddProduct(product);
+            productForm.Product = product;
+            bool added = productForm.AddProduct();
             Assert.IsTrue(added);
         }
 
@@ -43,7 +42,8 @@ namespace UnitTest
                 NrOfEngines = 3
             };
             var productForm = new ProductFormViewModel(product);
-            bool added = productForm.AddProduct(product);
+            productForm.Product = product;
+            bool added = productForm.AddProduct();
             Assert.IsFalse(added);
 
         }
@@ -62,7 +62,8 @@ namespace UnitTest
                 NrOfEngines = 3
             };
             var productForm = new ProductFormViewModel(product);
-            bool added = productForm.AddProduct(product);
+            productForm.Product = product;
+            bool added = productForm.AddProduct();
             Assert.IsFalse(added);
         }
 

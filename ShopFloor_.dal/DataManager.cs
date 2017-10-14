@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopFloor.dal
 {
@@ -12,11 +10,22 @@ namespace ShopFloor.dal
         public int SumPrice { get; set; }
 
         /// <summary>
-        /// Constructor, make instance of Cont class to connect the DB
+        /// Constructor, make instance of Cont class to connect the DB. Admin: because the new registered persons can't be Admins
         /// </summary>
         public DataManager()
         {
             _ctx = new Cont();
+            if(!_ctx.Users.Any(x => x.Username == "Admin"))
+            {
+                _ctx.Users.Add(new UserDBModel
+                    {
+                         Username = "Admin",
+                         Password = "Admin",
+                         Cash = 10000,
+                         Admin = true
+                    });
+                 _ctx.SaveChanges();
+            }
         }
 
 

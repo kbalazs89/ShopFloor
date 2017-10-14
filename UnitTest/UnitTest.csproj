@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CartTest.cs" />
+    <Compile Include="CatMainTest.cs" />
     <Compile Include="DataManagerTest.cs" />
     <Compile Include="ProdFormTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

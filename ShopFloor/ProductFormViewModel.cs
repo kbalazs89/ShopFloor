@@ -19,7 +19,7 @@ namespace ShopFloor
         /// <summary>
         /// Call Validator method and DataManager's AddProduct method to insert record to DB. Called from MainWindow
         /// </summary>
-        public bool AddProduct(Product Product)
+        public bool AddProduct()
         {
             var manager = new DataManager();
             if (ProductValidate())

@@ -1,21 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 
 namespace ShopFloor
 {
     public partial class CartView : Window
     {
+
+        static Random R = new Random();
+        int id = R.Next(0, 10000);
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -31,11 +25,12 @@ namespace ShopFloor
             CartViewModel cartMM = new CartViewModel();
             if (cartMM.Purchase())
             {
-                MessageBox.Show("Sikeres vásárlás");
+                MessageBox.Show("Success! Pick up your plane at the nearest airport! Refer your code: " +id);
+                cartMM.ClearCart();
                 Close();
             }
             else
-                MessageBox.Show("Not enough cash :( ");
+                MessageBox.Show("Looks like something is missing. Either your cash or a product from your cart");
         }
 
         private void ClearClick(object sender, RoutedEventArgs e)

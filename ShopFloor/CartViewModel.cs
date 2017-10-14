@@ -1,10 +1,5 @@
 ﻿using ShopFloor.dal;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopFloor
 {
@@ -37,17 +32,21 @@ namespace ShopFloor
         public bool Purchase()
         {
             var manager = new DataManager();
-            foreach (var product in PurchasedProducts)
+            if (PurchasedProducts.Count > 0)
             {
-                if (manager.BuyProduct(product.Name, product.Quantity, UserCart.Username))
-                    UserCart.Cash -= manager.SumPrice;
-                else
-                    return false;
+                foreach (var product in PurchasedProducts)
+                {
+                    if (manager.BuyProduct(product.Name, product.Quantity, UserCart.Username))
+                        UserCart.Cash -= manager.SumPrice;
+                    else
+                        return false;
+                }
+
+                PurchasedProducts = new ObservableCollection<Product>();
+                StaticClass.PurchasedProducts = new ObservableCollection<Product>();
+                return true;
             }
-            
-            PurchasedProducts = new ObservableCollection<Product>();
-            StaticClass.PurchasedProducts = new ObservableCollection<Product>();
-            return true;
+            return false;
         }
 
         /// <summary>

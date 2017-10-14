@@ -26,6 +26,6 @@
         </ListBox>
         <Button Content="Purchase!" HorizontalAlignment="Left" Margin="311,73,0,0" VerticalAlignment="Top" Width="86" Click="PurchaseClick" FontFamily="Bookman Old Style" Height="20" Background="{x:Null}" BorderThickness="0,0,3,0"/>
         <Button Content="Empty Cart" HorizontalAlignment="Left" Margin="311,113,0,0" VerticalAlignment="Top" Width="86" Click="ClearClick" FontFamily="Bookman Old Style" Height="20" Background="{x:Null}" BorderThickness="0,0,3,0"/>
-        <Label Content="{Binding CartPrice}" ContentStringFormat="0 M USD" HorizontalAlignment="Left" Margin="311,10,0,0" VerticalAlignment="Top" Width="86" Height="29" BorderThickness="0,0,3,0" FontWeight="Bold"/>
+        <Label Content="{Binding CartPrice}" ContentStringFormat="0 M USD" HorizontalAlignment="Left" Margin="289,10,0,0" VerticalAlignment="Top" Width="108" Height="29" BorderThickness="0,0,3,0" FontWeight="Bold"/>
     </Grid>
 </Window>

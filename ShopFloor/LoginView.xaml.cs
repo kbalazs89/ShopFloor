@@ -1,30 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace ShopFloor
 {
     public partial class LoginView : Window
     {
-        readonly bool _onLogout;
+        //readonly bool _onLogout;
         public LoginViewModel ViewModel { get; }
 
         /// <summary>
         /// Constructor
         /// </summary>
-        public LoginView(bool onLogout = false)
+        public LoginView(/*bool onLogout = false*/)
         {
-            _onLogout = onLogout;
+            //_onLogout = onLogout;
             InitializeComponent();
             ViewModel = new LoginViewModel();
             DataContext = ViewModel;
@@ -47,7 +37,13 @@ namespace ShopFloor
         /// </summary>
         private void LogoutClick(object sender, RoutedEventArgs e)
         {
-                Application.Current.Shutdown();
+            MessageBoxResult exit = MessageBox.Show("Are you sure?", "Logout", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (exit == MessageBoxResult.Yes)
+            {
+                Environment.Exit(0);
+            }
+            else
+                return;
         }
 
         /// <summary>
