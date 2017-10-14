@@ -118,15 +118,15 @@ namespace ShopFloor.dal
         /// <summary>
         /// Deletes the records from the product DB
         /// </summary>
-        public bool BuyProduct(string name, int price, int quantity, int nrOfSeats, int flightRange, string username)
+        public bool BuyProduct(string name, int quantity, string username)
         {
             SumPrice = 0;
             foreach (var prod in _ctx.Products)
             {
-                if (name == prod.Name && price == prod.Price && nrOfSeats == prod.NrOfSeats && flightRange == prod.FlightRange)
+                if (name == prod.Name )
                 {
                     prod.Quantity -= quantity;
-                    SumPrice = SumPrice + (price * quantity);
+                    SumPrice = SumPrice + (prod.Price * quantity);
                 }
             }
             foreach (var user in _ctx.Users)

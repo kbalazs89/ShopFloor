@@ -36,6 +36,7 @@ namespace ShopFloor
             string password2 = PasswordReg2.Password;
             string result = regView.Reg(password, password2);
             MessageBox.Show(result);
+            Close();
         }
     }
 }

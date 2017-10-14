@@ -2,7 +2,7 @@
 
 namespace ShopFloor
 {
-    class ProductFormViewModel : BaseModel
+    public class ProductFormViewModel : BaseModel
     {
         public Product Product { get; set; }
         public bool IsNew { get; set; }
@@ -55,14 +55,19 @@ namespace ShopFloor
         /// </summary>
         public bool ProductValidate()
         {
-            return !string.IsNullOrEmpty(Product.Name) && 
-                Product.Name.Length > 2 && 
-                Product.Price > 0 && 
-                Product.Quantity > 0 && 
+            return !string.IsNullOrEmpty(Product.Name) &&
+                Product.Name.Length > 2 &&
+                Product.Price > 0 &&
+                Product.Price < 2000 &&
+                Product.Quantity > 0 &&
+                Product.Quantity < 1000 &&
                 !string.IsNullOrEmpty(Product.Cathegory) &&
                 Product.NrOfSeats > 0 &&
+                Product.NrOfSeats < 2000 &&
                 Product.FlightRange > 0 &&
-                Product.NrOfEngines > 0;
+                Product.FlightRange < 100000 &&
+                Product.NrOfEngines > 0 &&
+                Product.NrOfEngines < 30;
         }
 
     }

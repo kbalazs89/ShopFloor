@@ -39,7 +39,7 @@ namespace ShopFloor
             var manager = new DataManager();
             foreach (var product in PurchasedProducts)
             {
-                if (manager.BuyProduct(product.Name, product.Price, product.Quantity, product.NrOfSeats, product.FlightRange, UserCart.Username))
+                if (manager.BuyProduct(product.Name, product.Quantity, UserCart.Username))
                     UserCart.Cash -= manager.SumPrice;
                 else
                     return false;
