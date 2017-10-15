@@ -64,7 +64,7 @@ namespace ShopFloor.dal
         }
 
         /// <summary>
-        /// Check if the record already exist, if not, add the requested record
+        /// Check if the record already exist, if not, add the requested record, if already exist returns with false
         /// </summary>
         public bool AddProduct(string name, int price, int quantity, string cathegory, int nrOfSeats, int flightRange, int nrOfEngines)
         {
