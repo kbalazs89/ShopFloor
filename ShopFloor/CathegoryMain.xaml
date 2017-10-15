@@ -7,7 +7,7 @@
         xmlns:base="clr-namespace:ShopFloor"
         mc:Ignorable="d"
         Title="Category" Height="534.149" Width="382.842">
-    <Grid Margin="0,0,-0.2,4.8">
+    <Grid Margin="0,0,-0.2,0.8">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="1"/>

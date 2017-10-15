@@ -46,15 +46,6 @@ namespace ShopFloor.dal
         }
 
         /// <summary>
-        /// Retrieve all products from DB. 1 overload. Called from CatMainModel and ProductDetailsViewModel
-        /// </summary>
-        public IEnumerable<ProductDBModel> GetProducts(string sender)
-        {
-
-            return _ctx.Products.OrderBy(x => x.Name);
-        }
-
-        /// <summary>
         /// Retrieve all products from DB, no overload
         /// </summary>
         public IEnumerable<ProductDBModel> GetProducts()
@@ -120,8 +111,6 @@ namespace ShopFloor.dal
                     _ctx.Products.Remove(prod);
             }
             _ctx.SaveChanges();
-                      
-
         }
  
         /// <summary>

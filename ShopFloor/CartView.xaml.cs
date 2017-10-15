@@ -37,9 +37,8 @@ namespace ShopFloor
         {
             CartViewModel cartMM = new CartViewModel();
             cartMM.ClearCart();
-            MessageBox.Show("Kosár ürítve!");
+            MessageBox.Show("No products in cart");
             Close();
-
         }
     }
 }

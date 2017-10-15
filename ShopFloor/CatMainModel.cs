@@ -16,7 +16,7 @@ namespace ShopFloor
         {
             ProductList = new ObservableCollection<Product>();
             var manager = new DataManager();
-            foreach (var product in manager.GetProducts(whoSent))
+            foreach (var product in manager.GetProducts())
             {
                 if (whoSent == product.Cathegory)
                     ProductList.Add(new Product(product));

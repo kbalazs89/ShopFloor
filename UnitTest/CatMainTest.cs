@@ -53,7 +53,7 @@ namespace UnitTest
         }
 
         [TestMethod]
-        public void Delete_product_Pass()
+        public void Delete_Product_Pass()
         {
             var catMain = new CatMainModel("AIRBUS");
             Assert.IsNull(catMain.DeleteProduct(product));

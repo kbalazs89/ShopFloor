@@ -64,7 +64,7 @@
             </Button>
         </StackPanel>
         <Label Content="{Binding User.Username}" HorizontalAlignment="Left" Margin="78,94,0,0" VerticalAlignment="Top" Width="90" Height="35"  HorizontalContentAlignment="Right" FontFamily="Baskerville Old Face" FontSize="15"/>
-        <Label Content="{Binding User.Cash}" HorizontalAlignment="Left" Margin="200,94,0,0" VerticalAlignment="Top" Width="90" HorizontalContentAlignment="Right" Height="35" ContentStringFormat="0 M USD" FontFamily="Baskerville Old Face" FontSize="15"/>
+        <Label Content="{Binding User.Cash}" HorizontalAlignment="Left" Margin="200,94,0,0" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Right" Height="35" ContentStringFormat="0 M USD" FontFamily="Baskerville Old Face" FontSize="15"/>
         <Button Content="Cart" FontFamily="Bookman Old Style" HorizontalAlignment="Left" Margin="1021,443,0,0" VerticalAlignment="Top" Width="125" Click="ClickCart" BorderThickness="0" Background="#FF99B4D1"/>
         <Button x:Name="AddProductButton" Content="Add product" HorizontalAlignment="Left" Margin="820,443,0,0" VerticalAlignment="Top" Width="125" FontFamily="Bookman Old Style" Click="AddProductClick" Background="#FF98B3D0" BorderThickness="0" SnapsToDevicePixels="True"/>
         <Label Content="What are you up today?" HorizontalAlignment="Left" Margin="414,38,0,0" VerticalAlignment="Top" Height="65" Width="544" FontFamily="Baskerville Old Face" FontSize="36"/>

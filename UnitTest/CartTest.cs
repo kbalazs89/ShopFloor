@@ -19,7 +19,7 @@ namespace UnitTest
         };
 
         [TestMethod]
-        public void Purchase_noProduct()
+        public void Purchase_NoProduct()
         {
             var cartVM = new CartViewModel();
             Assert.IsFalse(cartVM.Purchase());

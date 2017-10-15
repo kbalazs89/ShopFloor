@@ -10,7 +10,7 @@ namespace UnitTest
         static Random R = new Random();
 
         [TestMethod]
-        public void AddProductTest_new()
+        public void AddProductTest_New()
         {
             Product product = new Product
             {
@@ -29,7 +29,7 @@ namespace UnitTest
         }
 
         [TestMethod]
-        public void AddProductTest_Already_exist()
+        public void AddProductTest_Already_Exist()
         {
             Product product = new Product
             {

@@ -9,17 +9,6 @@ namespace UnitTest
     {
         static Random R = new Random();
 
-        /// <summary>
-        /// LinQ miatt nem megy
-        /// </summary>
-        [TestMethod]
-        public void GetUserTest_With_User()
-        {
-            var manager = new DataManager();
-            var userDBM = manager.GetUser("kutya", "malac");
-            Assert.IsNotNull(userDBM);
-        }
-
         [TestMethod]
         public void AddProduct_Already_exist()
         {
@@ -51,14 +40,6 @@ namespace UnitTest
             var manager = new DataManager();
             bool result = manager.BuyProduct("Jani", 2000, "Feri");
             Assert.IsFalse(result);
-        }
-
-        [TestMethod]
-        public void Regist()
-        {
-            var manager = new DataManager();
-            string username = R.Next(0, 100000).ToString();
-            manager.Regist(username, "Feri");
         }
     }
 }

@@ -12,7 +12,7 @@ namespace ShopFloor
         public ProductDetailsViewModel(string whoSent)
         {
             var manager = new DataManager();
-            foreach (var product in manager.GetProducts(whoSent))
+            foreach (var product in manager.GetProducts())
             {
                 if (whoSent == product.Name)
                     SelectedProduct = new Product(product);
